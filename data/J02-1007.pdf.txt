@@ -1,0 +1,230 @@
+Briefly Noted
+English for the Computer:
+The SUSANNE Corpus and Analytic
+Scheme
+Geoffrey Sampson
+(University of Sussex)
+Oxford: Clarendon Press, 1995,1 ix+499 pp;
+hardbound, ISBN 0-19-824023-6, $115.00,
+£79.00
+Over the past 10–20 years, there has been
+increasing interest in grammatical / syntac-
+tic annotation schemes for corpora. Anno-
+tated corpora are essential for training and
+testing taggers and parsers, for describing
+the use of lexical and grammatical features,
+and for comprehensive analyses of registers
+or sublanguages. Several annotation schemes
+have been developed over this period, in-
+cluding both tagsets (see the survey by Leech
+[1997]) and parsing schemes for syntactic
+treebanks (see the survey by Leech and Eyes
+[1997]).
+The SUSANNE analytic scheme is proba-
+bly the most detailed and explicit of these
+annotation frameworks. In this 500-page
+book, Sampson describes every detail of the
+scheme, which is based on a multiyear analy-
+sis and annotation of the SUSANNE Corpus.
+This book has different goals from most
+corpus-based studies. It does not present the
+results of corpus analysis or describe new ap-
+proaches or tools for natural language pro-
+cessing. Instead, the goals here address the
+need for a standard. At present, every re-
+search group has its own set of standards
+for corpus annotation, resulting in unnec-
+essary preprocessing when corpora are ex-
+changed across sites, and making it difficult
+to compare evaluations of corpus analysis
+tools. (For example, it is notoriously diffi-
+cult to compare accuracy rates for taggers
+because they vary so widely in the range of
+phenomena annotated.) Sampson proposes
+a comprehensive annotation scheme, cover-
+ing part-of-speech tagging, surface grammar,
+and issues of underlying “logical grammar,”
+with the hope that the scheme might pro-
+vide the basis for a widely adopted stan-
+dard.
+To develop the annotation scheme, Samp-
+son and his colleagues manually annotated
+1 Received for review, May 2001.
+the 130,000-word SUSANNE Corpus. This
+corpus has had several lives. It began as a
+subset of the Brown Corpus, selected from
+four text categories: press reportage, belles
+lettres, “learned” prose, and adventure fic-
+tion. That subcorpus was manually analyzed
+by Alvar Ellega?rd and colleagues at Gothen-
+burg University and came to be known as the
+Gothenburg Corpus. Sampson’s team then
+analyzed this same subcorpus in greater de-
+tail, together with a small sample of speech
+from the London-Lund Corpus, resulting in
+the SUSANNE Corpus.
+The book under review documents the
+hundreds of decisions required for this an-
+notation process. This resource should prove
+useful for researchers faced with these same
+decisions during corpus analysis. However,
+the level of detail will sometimes over-
+whelm computational and corpus linguists
+attempting to develop automatic taggers and
+parsers. Many of these decisions clearly
+require a human analyst, and thus it is
+not clear how useful they will be for ma-
+chine processing. Others end up seeming
+arbitrary, despite the detailed justifications.
+For example, Flagstaff —my home town—is
+tagged as a common noun (page 87), be-
+cause the word originally referred to a flag-
+pole. In contrast, Greenwood is tagged as
+a proper noun (page 88), because it was
+originally the surname of a colonist. These
+principles seem clear, even if nearly im-
+possible to implement automatically. How-
+ever, I had trouble reconciling those deci-
+sions with the tagging of Red as a proper
+noun (masculine forename) in Red Hogan
+but as an adjective in V. E. (Red) Berry
+(page 138).
+I suspect that Sampson would not be
+bothered by such criticisms. He did not
+set out to develop the perfect annotation
+scheme, and he readily agrees that his
+scheme—like all others—has controversial
+points. What makes this scheme unique is
+its attempt to be comprehensive and ex-
+plicit about all details. In this respect, cor-
+pus researchers will find themselves relying
+on this reference book increasingly as they
+work toward the goal of readily exchange-
+able resources.—Douglas Biber, Northern Ari-
+zona University
+102
+Briefly Noted
+References
+Leech, Geoffrey. 1997. Grammatical tagging.
+In Roger Garside, Geoffrey Leech, and
+Tony McEnery, editors, Corpus Annotation:
+Linguistic Information from Computer Text
+Corpora. Longman, London, pages 19–33.
+Leech, Geoffrey and Elizabeth Eyes. 1997.
+Syntactic annotation: Treebanks. In Roger
+Garside, Geoffrey Leech, and Tony
+McEnery, editors, Corpus Annotation:
+Linguistic Information from Computer Text
+Corpora. Longman, London, pages 34–52.
+Mathematical Foundations of
+Information Retrieval
+Sa´ndor Dominich
+(University of Veszpre´m)
+Dordrecht: Kluwer Academic Publishers
+(Mathematical modelling: Theory and
+applications, edited by R. Lowen,
+volume 12), 2001, xxi+284 pp; hardbound,
+ISBN 0-7923-6861-4, $107.00, £67.00, C{ 99.00
+While libraries have long stored informative
+material for later use, information retrieval as
+we now know it did not begin to coalesce as
+a discipline until the 1960s and early 1970s,
+with advances in commercial systems and in-
+fluential research publications by scholars in-
+cluding Lancaster, Maron, Salton, and Sparck
+Jones. While commercial systems of the time
+most commonly accepted Boolean queries as
+input, describing the relationships desired
+between human-assigned index terms in the
+documents to be retrieved, researchers be-
+gan developing models and software con-
+sistent with term-weighting systems; these
+evolved into the methods used by today’s
+search engines in ranking documents. While
+many of the term-weighting and automatic
+indexing schemes were initially rather sim-
+ple, they have grown in complexity, based
+on developments in retrieval and linguistic
+theory and years of experimentation. While
+more sophisticated linguistic methods have
+been studied in retrieval contexts nearly as
+long as retrieval itself has been studied, the
+relative level of satisfaction with the per-
+formance of retrieval systems using simple
+automated indexing has kept the linguistic
+focus of retrieval researchers on individual
+terms, usually assuming a “bag of terms”
+model.
+Dominich summarizes many of the math-
+ematical foundations of various information
+retrieval models. Chapter 2 provides the core
+mathematical material in the book. A wide
+range of concepts is presented, with a sec-
+tion for each of the following: logic, set the-
+ory, relations, functions, families of sets, al-
+gebra, calculus, differential equations, vec-
+tors, probability, fuzzy sets, metric spaces,
+topology, graph theory, matroid theory, re-
+cursion and complexity theory, and artificial
+neural networks. The sections are typically
+broken down into formal definitions, theo-
+rems, and examples. The definitions and the-
+orems are clear and relatively easy to under-
+stand. Those seeking longer or deeper mathe-
+matical expositions on these topics will need
+to go to the mathematical literature; how-
+ever, in most cases, the material provided
+by Dominich will be adequate for linguists
+and retrieval specialists trying to understand
+retrieval models. The chapter has little on
+the relative strengths, weaknesses, and con-
+sequences of the adoption of particular math-
+ematical paradigms, which may be frustrat-
+ing to those asking “Why?” The numeric or
+symbolic examples provided at the ends of
+many sections are brief but very useful.
+Chapter 3 addresses retrieval models, with
+one-third of the chapter addressing tradi-
+tional text retrieval models (Boolean, vec-
+tor, and probabilistic), one-third addressing
+“nonclassical” models that have yet to see
+much commercial use but would be of inter-
+est to philosophers and linguists (e.g., ideas
+based on the works of Barwise and Dev-
+lin), and one-third addressing “alternative”
+models of information retrieval, including
+a presentation on latent semantic indexing
+(four pages) and natural language process-
+ing (one page). Other brief discussions of
+techniques using linguistic information are
+spread throughout the chapters.
+Chapter 4 addresses how information re-
+trieval, as modeled in Chapter 3, may be
+based rigorously on the mathematics pre-
+sented in Chapter 2. Much of this consti-
+tutes original research. It is helpful to see
+the work of a variety of authors brought
+together into the uniform presentation pro-
+vided by Dominich. Chapter 5 formally ex-
+amines retrieval effectiveness. This presenta-
+tion goes into far more depth than do most
+information retrieval books and provides a
+helpful summary of the foundations of the
+103
+Computational Linguistics Volume 28, Number 1
+area. The appendices contain algorithms and
+MathCAD code for several retrieval models.
+The book uses a section-numbering style
+where the chapter number isn’t at the begin-
+ning of each section number, nor is the chap-
+ter number in the header or the footer for
+most pages. This makes navigating through
+the book unnecessarily difficult.
+Mathematical Foundations of Information Re-
+trieval will be useful to those computational
+linguists who want an accessible yet mathe-
+matically rigorous presentation of the foun-
+dations of information retrieval algorithms
+and models.—Robert Losee, University of North
+Carolina
+104

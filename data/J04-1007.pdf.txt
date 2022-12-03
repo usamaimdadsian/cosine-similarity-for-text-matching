@@ -1,0 +1,179 @@
+115
+Briefly Noted
+The Turing Test: The Elusive Standard
+of Artificial Intelligence
+James H. Moor (editor)
+(Dartmouth College)
+Dordrecht: Kluwer Academic Publishers
+(Studies in cognitive systems, edited by
+James H. Fetzer, volume 30), 2003,
+ix+273 pp; hardbound, ISBN 1-4020-1204-7,
+$99.00, £66.00, C– 103.00
+Alan Turing begins his 1950 Mind article,
+“Computing Machinery and Intelligence,”
+with the following straightforward pro-
+nouncement: “I propose to consider the ques-
+tion ‘Can machines think?’ ” He quickly (too
+quickly?) argues for “replacing” the original
+question with another “which is closely re-
+lated to it and is expressed in relatively un-
+ambiguous words.” (Please note the vague-
+ness of the claim; what is not vague is that
+it is not a claim of identity.) Turing goes on
+to describe the new form of the “problem”
+in terms of an “imitation game,” played with
+three people, a man A, a woman B, and an in-
+terrogator C, who may be of either sex. They
+are placed in separate rooms, with the only
+form of communication between them be-
+ing teleprinter (or, to be au courant, instant-
+messenger clients on their desktops). C is
+to ask them questions or otherwise engage
+them in conversation, with the object of the
+game being for C, who knows them only by
+the labels X and Y, to determine which of
+them is a man and which a woman. Turing
+then proceeds to offer his replacement(s) for
+the original question:
+We now ask the question ‘What will
+happen when a machine takes the part
+of A in this game?’ Will the interroga-
+tor decide wrongly as often when the
+game is played like this as he does
+when the game is played between a
+man and a woman? These questions
+replace our original ‘Can machines
+think?’
+And the rest is history—highly contentious
+history. Alas, not much to useful effect is
+made of (or added to) this history in the
+volume under review, which is a collection
+of articles selected from recent issues of two
+Kluwer journals, Minds and Machines and
+Journal of Logic, Language and Information. A
+truly unwarranted amount of space (that is,
+much much more than a page) is devoted
+to worrying about the relation between the
+game as described above and a brief reprise
+later in the article. In the interim, Turing has
+given the reader a short course in computer
+science, that is, an introduction to Turing ma-
+chines and, in particular, the idea of a univer-
+sal digital machine. He goes on to give what
+he clearly intends to be a more precise ren-
+dering of his original replacement question:
+Let us fix our attention on one partic-
+ular digital computer C. Is it true that
+by modifying this computer to have
+an adequate storage, suitably increas-
+ing its speed of action, and providing
+it with an appropriate program, C can
+be made to play satisfactorily the part
+of A in the imitation game, the part of
+C being taken by a man?
+This is sloppy. Aside from the singularly un-
+fortunate choice of constant (wasn’t C the in-
+terrogator?), we seem to have lost a player
+and now the part of B, the woman in the
+drama in the first description, is being played
+by a man. What ever happened to her?
+Sloppy, yes, but the sloppiness need not
+be taken to raise issues about sexual identity
+and the central role of deceit in our mental
+lives. One of the five sections of the book is
+largely given over to much ado about this
+particular variety of nothing. (Take my word
+for it: It’s enough to make one grind one’s
+teeth.)
+There are a few worthwhile pieces in
+the collection, in particular, characteristically
+sober and thoughtful overviews by Jack
+Copeland and by the editor. And there is ab-
+solutely nothing of interest in the collection
+about dialogue or conversation: the medium,
+after all, of the imitation game.—David Israel,
+SRI International
+The contents of the volume are as follows:
+1. History
+B. Jack Copeland, “The Turing Test”
+Ayse Pinar Saygin, Ilyas Cicekli, and Varol
+Akman, “Turing Test: 50 Years Later”
+2. Interpretation
+Susan G. Sterrett, “Turing’s Two Tests for
+Intelligence”
+Saul Traiger, “Making the Right
+Identification in the Turing Test”
+Gualtiero Piccinini, “Turing’s Rules for the
+Imitation Game”
+116
+Computational Linguistics Volume 30, Number 1
+3. Criticism
+Sean Zdenek, “Passing Loebner’s Turing
+Test: A Case of Conflicting Discourse
+Functions”
+Bruce Edmonds, “The Constructibility of
+Artificial Intelligence (as Defined by the
+Turing Test)”
+Edmund M. A. Roland, “Intelligence is
+Not Enough: On the Socialization of
+Talking Machines”
+4. Defense
+William J. Rapaport, “How to Pass a Tur-
+ing Test”
+Larry Hauser, “Look Who’s Moving the
+Goal Posts Now”
+James H. Moor, “The Status and Future of
+the Turing Test”
+5. Alternatives
+Selmer Bringsjord, Paul Bello, and David
+Ferrucci, “Creativity, the Turing Test,
+and the Better (Lovelace) Test”
+Gerald J. Erion, “The Cartesian Test for
+Automatism”
+S. Harnad, “Minds, Machines and Turing”
+Form and Meaning in Language. Vol-
+ume I: Papers on Semantic Roles
+Charles J. Fillmore
+(University of California, Berkeley)
+Stanford, CA: CSLI Publications (CSLI
+lecture notes, number 121) (distributed by
+the University of Chicago Press), 2003,
+viii+311 pp; hardbound, ISBN 1-57586-285-9,
+$70.00, £49.00; paperbound, ISBN
+1-57586-286-7, $25.00, £17.50
+The linguistic theories of Charles Fillmore,
+developed in the 1960s in reaction to Chom-
+skian generative grammar, have had a pro-
+found influence on computational linguistics
+that is felt to this day. His so-called case
+grammars were a precursor of frame-based
+semantic representations and of contempo-
+rary approaches to semantic roles. This vol-
+ume republishes seven of Fillmore’s impor-
+tant papers from 1968 to 1978, including the
+seminal “Case for Case” (1968) and “The
+Case for Case Reopened” (1977).—G.H.
+Modes of Discourse: The Local Struc-
+ture of Texts
+Carlota S. Smith
+(University of Texas)
+Cambridge: Cambridge University Press
+(Cambridge studies in linguistics, volume
+103), 2003, xiv+320 pp; hardbound, ISBN
+0-521-78169-8, $70.00
+“This book is a partial answer to the ques-
+tion: what can close linguistic analysis bring
+to the understanding of discourse? Discourse
+studies have focused on pragmatic factors
+such as genre expectations, discourse coher-
+ence relations, and inference. In part, this
+has been a natural reaction to earlier, rather
+unsuccessful attempts to apply the tech-
+niques of linguistic analysis beyond the sen-
+tence. . . . I attempt to find the right balance
+here, at least in part. I propose a local level
+of discourse, the Discourse Mode, which
+has linguistic properties and discourse mean-
+ing. I posit five modes: Narrative, Report,
+Descriptive, Information, and Argument.”—
+From the author’s introduction

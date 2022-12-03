@@ -1,0 +1,203 @@
+Geometry and Meaning
+Dominic Widdows
+(MAYA Design)
+Stanford, CA: CSLI Publications (CSLI lecture notes, number 172), 2004,
+xxii+319 pp; hardbound, ISBN 1-57586-447-9, $70.00; paperbound,
+ISBN 1-57586-448-7, $25.00, £17.50
+Reviewed by
+C.J. “Keith” van Rijsbergen
+University of Glasgow
+Let no man enter here who is ignorant of geometry.
+—Plato
+Geometry and Meaning is an interesting book about a relationship between geometry
+and logic defined on certain types of abstract spaces and how that intimate relation-
+ship might be exploited when applied in computational linguistics. It is also about an
+approach to information retrieval, because the analysis of natural language, especially
+negation, is applied to problems in IR, and indeed illustrated throughout the book by
+simple examples using search engines. It is refreshing to see IR issues tackled from a
+different point of view than the standard vector space (Salton, 1968). It is an enjoyable
+read, as intended by the author, and succeeds as a sort of tourist guide to the subject
+in hand.
+The early part of the book concentrates on the introduction of a number of elemen-
+tary concepts from mathematics: graph theory, linear algebra (especially vector spaces),
+lattice theory, and logic. These concepts are well motivated and illustrated with good
+examples, mostly of a classificatory or taxonomic kind. One of the major goals of the
+book is to argue that non-classical logic, in the form of a quantum logic, is a candidate
+for analyzing language and its underlying logic, with a promise that such an approach
+could lead to improved search engines. The argument for this is aided by copious
+references to early philosophers, scientists, and mathematicians, creating the impression
+that when Aristotle, Descartes, Boole, and Grassmann were laying the foundations for
+taxonomy, analytical geometry, logic, and vector spaces, they had a more flexible and
+broader view of these subjects than is current. This is especially true of logic. Thus the
+historical approach taken to introducing quantum logic (chapter 7) is to show that this
+particular kind of logic and its interpretation in vector space were inherent in some of
+the ideas of these earlier thinkers.
+Widdows claims that Aristotle was never respected for his mathematics and that
+Grassmann’s Ausdehnungslehre was largely ignored and left in obscurity. Whether
+Aristotle was never admired for his mathematics I am unable to judge, but certainly
+Alfred North Whitehead (1925) was not complimentary when he said:
+The popularity of Aristotelian Logic retarded the advance of physical science throughout the
+Middle Ages. If only the schoolmen had measured instead of classifying, how much they might
+have learnt! (page 41)
+Computational Linguistics Volume 32, Number 1
+On the other hand, Grassmann was recognized for his foundational work on analytical
+geometry; for example, Hermann Weyl (1949) comments:
+Today probably the best approach to analytic geometry is by means of the vector concept,
+following the procedure of Grassmann’s Ausdehnungslehre. (page 68)
+Weyl of course contributed extensively to quantum mechanics and already then held
+the view that “classical logic does not fit in with quantum physics and is to be replaced
+by a kind of ‘quantum logic’ ” (page 263). More recently Suppes et al. (1989) refer to
+Grassmann’s ground-breaking work on geometrical structures, which are now called
+Grassmann Structures. I think the case for Grassmann’s obscurity is unproven.
+Chapters 1–6 are really an elementary introduction for those without much exper-
+tise in mathematics and logic to prepare them for the novel work presented on quantum
+logic and concept lattices in Chapters 7 and 8 (but see Courant and Robbins [1941] and
+Marciszewski [1981] for further introductory material). The elementary concepts are
+well illustrated with examples from search engines and with problems of ambiguity
+of words. The “killer application” for quantum logic in chapter 7 is the modeling of
+negation, and in chapter 8 the interpretation of taxonomic structures as non-Boolean
+lattices. In both cases the applications are convincing. The basis for the representation
+in quantum logic is the lattice of subspaces of a vector space endowed with a geometry
+which determines a logic (Birkhoff and von Neumann 1936). It is a pity that Widdows
+did not complete the story, which was started by Birkhoff and von Neumann, and
+introduce the probability measure on this lattice of subspaces. One of the striking results
+in quantum theory is that this can be done consistently and uniquely (Gleason 1957).
+Von Neumann was well aware of this although he could not prove it; in 1954, he said:
+In other words, probability corresponds precisely to introducing the angles geometrically. Fur-
+thermore, there is only one way to introduce it. The more so because in the quantum mechanical
+machinery the negation of a statement, so the negation of a statement which is represented
+by a linear set of vectors, corresponds to the orthogonal complement of this linear space. (von
+Neumann, 1954, reproduced in Re´dei and Sto¨lzner 2001, page 244)
+Had probability been introduced, and therefore the role of measurement, it would
+have helped explain the somewhat tantalizing expression on page 238: “It follows
+that every ‘experimental proposition’ in a quantum mechanical system corresponds
+to a subspace of the vector space in which the states of the system are represented
+mathematically.” It is curious that in the entire book, probability is mentioned only
+twice in passing. Returning to Whitehead and his beef about Aristotle, when he com-
+plains about Aristotle not “measuring,” one needs to take this seriously because the
+machinery of quantum mechanics and its observables only makes sense when one con-
+siders the observation of attributes with a probability of success or failure. Heisenberg’s
+uncertainty principle, one of the foundation stones of quantum mechanics, was about
+observables and their probabilistic interaction. A quantum logic without a theory of
+observation (or interaction) is somewhat empty. Readers might like to pursue this line of
+reasoning by consulting Beltrametti and Cassinelli (1981), one of the seminal works on
+quantum logic.
+Each of Widdows’ chapters ends with a delightful and useful “Wider Reading”
+section encouraging the reader to explore further afield; overall, these sections total
+15 pages, or about 5% of the book. Below in the appendix to this review, I add a few
+references that complement some of Widdows’.
+156
+Book Reviews
+In his foreword to the book, Pentti Kanerva suggests that the substance of the
+book is “the exploration of mathematics that would be appropriate for describing
+concepts and meaning.” For this reviewer, this is only part of the story; the book goes
+beyond exploration and applies the relevant mathematics to computational problems in
+linguistics and information retrieval. It may be the first steps along the way to recasting
+some old problems in terms of some new mathematics.
+Appendix: Wider Reading
+Possibly the most outstanding reference to numerical taxonomy is Sneath and Sokal
+(1973). For a more up-to-date and appropriate reference to information retrieval, I
+would propose Belew (2000). The use and application of non-classical logic in IR is
+well covered by Crestani et al (1998). An extremely relevant set of papers on quantum
+logic, in that they deal with taxonomy and various conditionals — for example, the
+Stalnaker conditional — are the papers by Hardegree, especially Hardegree (1976).
+His 1982 paper on natural kinds covers similar territory to Widdows’ discussion on
+“extent” and “intent” and its mathematical duality. An excellent source for papers on
+developments in quantum logic is Beltrametti and van Fraassen (1981). A critical view
+of the quantum logic enterprise is Gibbins (1987). To plug the gap on measurement in
+quantum mechanics one can do no better than Wheeler and Zurek (1983).
+Although Widdows does an excellent job of introducing most of the elementary
+concepts needed in his book, there is room for some more guidance on where to go next.
+An excellent introduction to the broad field of mathematics, each chapter written by
+one of the masters of the field, is Newman (1988). More specifically, good introductions
+to the foundations of vector spaces can be found in Halmos (1958), and Isham (1989).
+Finally, it may be worth pointing out that the late Jon Barwise, who also worked at
+CSLI, introduced quantum logic as part of his work on information flow (Barwise and
+Seligman 1997).
+References
+Barwise, J. and J. Seligman (1997). Information
+Flow: The Logic of Distributed Systems.
+Cambridge University Press.
+Belew, R. 2000. Finding Out About:
+A Cognitive Perspective on Search Engine
+Technology and the WWW. Cambridge
+University Press.
+Beltrametti, E. G. and G. Cassinelli. 1981. The
+Logic of Quantum Mechanics. Addison-
+Wesley Publishing Company, London.
+Beltrametti, E. G. and B. C. van Fraassen,
+Eds. 1981. Current Issues in Quantum Logic.
+Plenum Press, New York.
+Birkhoff, G. and J. von Neumann. 1936. The
+logic of quantum mechanics. Annals of
+Mathematics, 37:823–843.
+Courant, R. and H. Robbins. 1941. What
+is Mathematics? An Elementary Approach
+to Ideas and Methods. Oxford University
+Press.
+Crestani, Fabio, Mounia Lalmas, and C. J.
+van Rijsbergen, editors. 1998. Information
+Retrieval: Uncertainty and Logics: Advanced
+Models for the Representation and Retrieval of
+Information. Kluwer, Boston.
+Gibbins, P. 1987. Particles and Paradoxes: The
+Limits of Quantum Logic. Cambridge
+University Press.
+Gleason, A. M. 1957. Measures on the closed
+subspaces of a Hilbert space. Journal of
+Mathematics and Mechanics, 6:885–893.
+Halmos, P. R. 1958. Finite-Dimensional Vector
+Spaces. D. van Nostrand Company, Inc.
+Hardegree, G. M. 1976. The conditional in
+quantum logic. In Patrick Suppes, editor,
+Logic and Probability in Quantum Mechanics,
+D. Reidel Publishing Company,
+pages 55–72.
+Hardegree, G. M. 1982. An approach to the
+logic of natural kinds. Pacific Philosophical
+Quarterly, 63:122–132.
+Isham, C. J. 1989. Lectures on Groups and
+Vector Spaces for Physicists. World Scientific,
+Singapore.
+Marciszewski, W., editor. 1981. Dictionary of
+Logic — As Applied in the Study of Language.
+Martinus Nijhoff Publishers.
+157
+Computational Linguistics Volume 32, Number 1
+Newman, J. R., ed. 1988. The World of
+Mathematics: A Small Library of the
+Literature of Mathematics from A’h-mose´ the
+Scribe to Albert Einstein. Tempus Books,
+Redmond.
+Re´dei, M. and M. Sto¨ltzner, eds. 2001.
+John von Neumann and the Foundations
+of Quantum Physics. Vienna Circle
+Institute Yearbook, Kluwer Academic
+Publishers.
+Salton, Gerard. 1968. Automatic Information
+Organization and Retrieval. McGraw-Hill.
+Sneath, P. H. A. and R. R. Sokal. 1973.
+Numerical Taxonomy. W. H. Freeman and
+Company, San Francisco.
+Suppes, Patrick., David H. Krantz, R.
+Duncan Luce, and Amos Tversky.
+1989. Foundations of Measurement,
+Vol. II: Geometrical, Threshold, and
+Probability Representations. Academic
+Press, San Diego.
+Weyl, Hermann. 1949. Philosophy of
+Mathematics and Natural Science.
+Princeton University Press.
+Wheeler, J. A. and W. H. Zurek, editors.
+1983. Quantum Theory and Measurement.
+Princeton University Press.
+Whitehead, Alfred North. 1926. Science
+and the Modern World. Cambridge
+University Press.
+Keith van Rijsbergen is the author of a recent book, The Geometry of Information Retrieval (Cambridge
+University Press, 2004), which introduces some of the mathematics used in quantum theory, such
+as Hilbert space, quantum probability, and logic, to recast some of the fundamental problems in
+IR. He has published extensively in the field of information retrieval. Van Rijsbergen’s address
+is Dept. of Computing Science, University of Glasgow, 17 Lilybank Gardens, Glasgow G12 8QQ,
+Scotland; e-mail: keith@dcs.gla.ac.uk.
+158

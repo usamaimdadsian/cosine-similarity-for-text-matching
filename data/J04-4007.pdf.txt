@@ -1,0 +1,149 @@
+Author Index
+Volume 30
+Abney, Steven 30(3):365ñ395
+Understanding the Yarowsky Algorithm
+Bell, Matthew
+see Wiebe, Janyce
+Bikel, Daniel M. 30(4):479ñ511
+Intricacies of Collinsí Parsing Model
+Brew, Chris
+see Lapata, Mirella
+Bruce, Rebecca
+see Wiebe, Janyce
+Casacuberta, Francisco 30(2):205ñ225
+Machine Translation with Inferred
+Stochastic Finite-State Transducers
+Chen, Kang
+see Feng, Haodi
+Deng, Xiaotie
+see Feng, Haodi
+Di Eugenio, Barbara
+see Poesio, Massimo
+Fais, Laurel 30(2):119ñ150
+Inferable Centers, Centering Transitions,
+and the Notion of Coherence
+Feng, Haodi 30(1):75ñ93
+Accessor Variety Criteria for Chinese Word
+Extraction
+Hitzeman, Janet
+see Poesio, Massimo
+Hwa, Rebecca 30(3):253ñ276
+Sample Selection for Statistical Parsing
+Kibble, Rodger 30(4):401ñ416
+Optimizing Referential Coherence in Text
+Generation
+Lapata, Mirella 30(1):45ñ73
+Verb Class Disambiguation Using
+Informative Priors
+Li, Cong
+see Li, Hang
+Li, Hang 30(1):1ñ22
+Word Translation Disambiguation Using
+Bilingual Bootstrapping
+Martin, Melanie
+see Wiebe, Janyce
+Mason, Zachary J. 30(1):23ñ44
+CorMet: A Computational Corpus-Based
+Conventional Metaphor Extraction System
+Mihov, Stoyan 30(4):451ñ477
+Fast Approximate Search in Large
+Dictionaries
+Navigli, Roberto 30(2):151ñ179
+Learning Domain Ontologies from
+Document Warehouses and Dedicated Web
+Sites
+Ney, Hermann
+see Nieﬂen, Sonja
+see Och, Franz Josef
+Nieﬂen, Sonja 30(2):181ñ204
+Statistical Machine Translation with Scarce
+Resources Using Morpho-Syntactic
+Information
+Och, Franz Josef 30(4):417ñ449
+The Alignment Template Approach to
+Statistical Machine Translation
+Poesio, Massimo 30(3):309ñ363
+Centering: A Parametric Theory and Its
+Instantiations
+Power, Richard
+see Kibble, Rodger
+Schulz, Klaus U.
+see Mihov, Stoyan
+Stevenson, Rosemary
+see Poesio, Massimo
+Velardi, Paola
+see Navigli, Roberto
+Vidal, Enrique
+see Casacuberta, Francisco
+Wiebe, Janyce 30(3):277ñ308
+Learning Subjective Language
+Wilson, Theresa
+see Wiebe, Janyce
+Zheng, Weimin
+see Feng, Haodi
+Title Index
+Volume 30
+Accessor Variety Criteria for Chinese Word
+Extraction
+Feng, Haodi,
+Chen, Kang,
+Deng, Xiaotie,
+and Zheng, Weimin 30(1):75ñ93
+Alignment Template Approach to Statistical
+Machine Translation, The
+Och, Franz Josef
+and Ney, Hermann 30(4):417ñ449
+Centering: A Parametric Theory and Its
+Instantiations
+Poesio, Massimo,
+Stevenson, Rosemary,
+Di Eugenio, Barbara,
+and Hitzeman, Janet 30(3):309ñ363
+CorMet: A Computational Corpus-Based
+Conventional Metaphor Extraction System
+Mason, Zachary J. 30(1):23ñ44
+Fast Approximate Search in Large
+Dictionaries
+Mihov, Stoyan
+and Schulz, Klaus U. 30(4):451ñ477
+Inferable Centers, Centering Transitions,
+and the Notion of Coherence
+Fais, Laurel 30(2):119ñ150
+Intricacies of Collinsí Parsing Model
+Bikel, Daniel M. 30(4):479ñ511
+Learning Domain Ontologies from
+Document Warehouses and Dedicated Web
+Sites
+Navigli, Roberto
+and Velardi, Paola 30(2):151ñ179
+Learning Subjective Language
+Wiebe, Janyce,
+Wilson, Theresa,
+Bruce, Rebecca,
+Bell, Matthew,
+and Martin, Melanie 30(3):277ñ308
+Machine Translation with Inferred
+Stochastic Finite-State Transducers
+Casacuberta, Francisco
+and Vidal, Enrique 30(2):205ñ225
+Optimizing Referential Coherence in Text
+Generation
+Kibble, Rodger
+and Power, Richard 30(4):401ñ416
+Sample Selection for Statistical Parsing
+Hwa, Rebecca 30(3):253ñ276
+Statistical Machine Translation with Scarce
+Resources Using Morpho-Syntactic
+Information
+Nieﬂen, Sonja
+and Ney, Hermann 30(2):181ñ204
+Understanding the Yarowsky Algorithm
+Abney, Steven 30(3):365ñ395
+Verb Class Disambiguation Using
+Informative Priors
+Lapata, Mirella
+and Brew, Chris 30(1):45ñ73
+Word Translation Disambiguation Using
+Bilingual Bootstrapping
+Li, Hang
+and Li, Cong 30(1):1ñ22

@@ -1,0 +1,213 @@
+117
+Publications Received
+Books listed below that are marked with a
+† have been selected for review in a future
+issue, and reviewers have been assigned to
+each.
+Authors and publishers who wish their pub-
+lications to be considered for review in Com-
+putational Linguistics should send a copy to
+the book review editor, Graeme Hirst, De-
+partment of Computer Science, University of
+Toronto, Toronto, Canada M5S 3G4. All rel-
+evant books received will be listed, but not
+all can be reviewed. Technical reports (other
+than dissertations) will not be listed or re-
+viewed. Authors should be aware that some
+publishers will not send books for review
+(even when instructed to do so); authors wish-
+ing to inquire as to whether their book has
+been received for review may contact the book
+review editor.
+Readers who wish to be considered as book
+reviewers for the journal should contact the
+book review editor, outlining their qualifica-
+tions, by e-mail at gh@cs.toronto.edu or by
+regular mail at the address above.
+†Logics of Conversation
+Nicholas Asher and Alex Lascarides
+(University of Texas at Austin and
+University of Edinburgh)
+Cambridge: Cambridge University Press
+(Studies in natural language processing,
+edited by Branimir Boguraev and Steven
+Bird), 2003, xxii+526 pp; hardbound, ISBN
+0-521-65058-5, $70.00
+†Finite State Morphology
+Kenneth R. Beesley and Lauri Karttunen
+(Xerox Research Centre Europe and Palo
+Alto Research Center)
+Stanford, CA: CSLI Publications (CSLI
+studies in computational linguistics, edited
+by Ann Copestake) (distributed by the
+University of Chicago Press), 2003,
+xviii+505 pp and CD-ROM; hardbound,
+ISBN 1-57586-433-9, $85.00, £59.50;
+paperbound, ISBN 1-57586-434-7, $40.00,
+£28.00
+†Data-Oriented Parsing
+Rens Bod, Remko Scha, and Khalil Sima’an
+(editors)
+(University of Amsterdam)
+Stanford, CA: CSLI Publications (CSLI
+studies in computational linguistics, edited
+by Ann Copestake) (distributed by the
+University of Chicago Press), 2003,
+xii+410 pp; hardbound, ISBN 1-57586-435-5,
+$80.00, £56.00; paperbound, ISBN
+1-57586-436-3, $35.00, £24.50
+†Recent Advances in Example-Based
+Machine Translation
+Michael Carl and Andy Way (editors)
+(Universita¨t des Saarlandes and Dublin City
+University)
+Dordrecht: Kluwer Academic Publishers
+(Text, speech and language technology
+series, edited by Nancy Ide and Jean
+Ve´ronis, volume 21), 2003, xxxi+482 pp;
+hardbound, ISBN 1-4020-1400-7, $173.00,
+£115.00, C– 180.00
+Knowledge and the Flow of Information
+Fred I. Dretske
+(Stanford Univertsity)
+Stanford, CA: CSLI Publications (David
+Hume series of philosophy and cognitive
+science reissues) (distributed by the
+University of Chicago Press), 1999;
+originally published by The MIT Press,
+1981; xiv+273 pp; paperbound, ISBN
+1-57586-195-X, $23.95, £17.00
+Extending the Scope of Corpus-Based
+Research: New Applications, New
+Challenges
+(Papers from the 22nd Conference of the
+International Computer Archive of
+Modern and Medieval English (ICAME
+2001), Louvain-la-Neuve, May 2001)
+Sylviane Granger and Stephanie
+Petch-Tyson (editors)
+(University of Louvain)
+Amsterdam: Editions Rodopi (Language
+and computers: Studies in practical
+linguistics, edited by Charles F. Meyer and
+Nelleke Oostdijk, volume 48), 2003, 261 pp;
+hardbound, ISBN 90-420-1136-X, $71.00,
+C– 60.00
+Computational Linguistics in the
+Netherlands 2002: Selected Papers from
+the Thirteenth CLIN Meeting
+Tanja Gaustad (editor)
+(University of Groningen)
+Amsterdam: Editions Rodopi (Language
+and computers: Studies in practical
+linguistics, edited by Charles F. Meyer and
+Nelleke Oostdijk, volume 47), 2003,
+v+159 pp; hardbound, ISBN 90-420-1126-2,
+$42.00, C– 35.00
+Virtual and Adaptive Environments:
+Applications, Implications, and Human
+Performance Issues
+Lawrence J. Hettinger and Michael W. Haas
+(editors)
+118
+Computational Linguistics Volume 30, Number 1
+(Air Force Research Laboratory,
+Wright-Patterson Air Force Base)
+Mahwah, NJ: Lawrence Erlbaum Associates,
+2003, xiii+582 pp; hardbound, ISBN
+0-8058-3107-X, $115.00 ($55.00 prepaid)
+Corpus Analysis: Language Structure and
+Language Use
+(Papers from the Third North American
+Symposium on Corpus Linguistics and
+Language Teaching, Boston, March 2001)
+Pepi Leistyna and Charles F. Meyer (editors)
+(University of Massachusetts, Boston)
+Amsterdam: Editions Rodopi (Language
+and computers: Studies in practical
+linguistics, edited by Jan Aarts and Willem
+Meijs, volume 46), 2003, v+288 pp;
+hardbound, ISBN 90-420-1036-3, $89.00,
+C– 75.00
+PALC 2001: Practical Applications in
+Language Corpora
+Barbara Lewandowska-Tomaszczyk (editor)
+(University of Lo´dz´)
+Frankfurt am Main: Peter Lang (Lo´dz´
+studies in language, edited by Barbara
+Lewandowska-Tomaszczyk and Patrick
+James Melia, volume 7), 556 pp;
+paperbound, ISBN 3-631-50987-1, $69.95,
+£45.00, C– 74.50
+Attributing Authorship: An Introduction
+Harold Love
+(Monash University)
+Cambridge: Cambridge University Press,
+2002, vii+271 pp; hardbound, ISBN
+0-521-78339-9, $65.00; paperbound, ISBN
+0-521-78948-6, $23.00
+Grammatical Evolution: Evolutionary
+Automatic Programming in an Arbitrary
+Language
+Michael O’Neill and Conor Ryan
+(University of Limerick)
+Dordrecht: Kluwer Academic Publishers
+(Genetic programming series, edited by
+John Koza), xvi+144 pp; hardbound, ISBN
+1-4020-7444-1, $110.00, £71.00, C– 113.00
+Concepts of Meaning: Framing an
+Integrated Theory of Linguistic Behavior
+Gerhard Preyer, Georg Peter, and Maria
+Ulkan
+(Johann Wolfgang Goethe–University)
+Dordrecht: Kluwer Academic Publishers
+(Philosophical studies series, edited by
+Wilfrid S. Sellars and Keith Lehrer, volume
+92), 2003, xv+273 pp; hardbound, ISBN
+1-4020-1329-9, $120.00, £79.00, C– 125.00
+†Automated Essay Scoring: A
+Cross-Disciplinary Perspective
+Mark D. Shermis and Jill C. Burstein
+(editors)
+(Florida International University and ETS
+Technologies, Inc.)
+Mahwah, NJ: Lawrence Erlbaum Associates,
+2003, xvi+238 pp; hardbound, ISBN
+0-8058-3973-9, $59.95 ($24.50 prepaid)
+Analogical Modeling: An Exemplar-Based
+Approach to Language
+Royal Skousen, Deryle Lonsdale, and
+Dilworth B. Parkinson (editors)
+(Brigham Young University)
+Amsterdam: John Benjamins Publishing
+(Human cognitive processing series, edited
+by Marcelo Dascal, volume 10), 2003,
+x+416 pp; hardbound, ISBN 90-272-2362-9
+and 1-58811-302-7, $103.00, C– 103.00
+†Word Sense Disambiguation: The Case
+for Combinations of Knowledge Sources
+Mark Stevenson
+(University of Sheffield)
+Stanford, CA: CSLI Publications (CSLI
+studies in computational linguistics, edited
+by Ann Copestake) (distributed by the
+University of Chicago Press), 2003,
+xvi+175 pp; hardbound, ISBN 1-57586-389-8,
+$67.50; paperbound, ISBN 1-57586-390-1,
+$25.00.
+Understanding English Grammar: A
+Linguistic Approach (second edition)
+Ronald Wardhaugh
+(University of Toronto)
+Malden, MA: Blackwell Publishing, 2003,
+xi+279 pp; hardbound, ISBN 0-631-23291-5,
+$71.95, paperbound, ISBN 0-631-23292-3,
+$36.95
+The Handbook of Data Mining
+Nong Ye (editor)
+(Arizona State University)
+Mahwah, NJ: Lawrence Erlbaum Associates
+(Human factors and ergonomics series,
+edited by Gavriel Salvendy), 2003,
+xxx+689 pp; hardbound, ISBN
+0-8058-4081-8, $149.95

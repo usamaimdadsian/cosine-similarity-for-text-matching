@@ -1,0 +1,122 @@
+512
+Publications Received
+Books listed below that are marked with a
+† have been selected for review in a future
+issue, and reviewers have been assigned to
+each.
+Authors and publishers who wish their
+publications to be considered for review in
+Computational Linguistics should send a copy
+to the book review editor, Graeme Hirst, De-
+partment of Computer Science, University of
+Toronto, Toronto, Canada M5S 3G4. All rel-
+evant books received will be listed, but not
+all can be reviewed. Technical reports (other
+than dissertations) will not be listed or re-
+viewed. Authors should be aware that some
+publishers will not send books for review
+(even when instructed to do so); authors wish-
+ing to inquire as to whether their book has
+been received for review may contact the book
+review editor.
+Readers who wish to be considered as book
+reviewers for the journal should contact the
+book review editor, outlining their qualifica-
+tions, by e-mail at ?gh@cs.toronto.edu? or at
+the address above.
+†Exploring Time, Tense and Aspect in
+Natural Language Database Interfaces
+Ion Androutsopoulos
+(Athens University of Economics and
+Business)
+Amsterdam: John Benjamins Publishing
+Company (Natural language processing
+series, edited by Ruslan Mitkov, volume 6),
+2002, ix+306 pp; hardbound, ISBN
+90-272-4990-3 and 1-58811-269-1, $116.00,
+C– 116.00
+†Probabilistic Linguistics
+Rens Bod, Jennifer Hay, and Stefanie
+Jannedy (editors)
+(University of Amsterdam, University of
+Canterbury, and Lucent Technologies)
+Cambridge, MA: The MIT Press, 2003,
+xii+451 pp; hardbound, ISBN 0-262-02536-1,
+$85.00; paperbound ISBN 0-262-52338-8,
+$35.00
+Spinning the Semantic Web: Bringing the
+World Wide Web to Its Full Potential
+Dieter Fensel, James Hendler, Henry
+Lieberman, and Wolfgang Wahlster (editors)
+(Vrije Universiteit Amsterdam, University of
+Maryland, MIT Media Laboratory, and
+Universita¨t des Saarlandes)
+Cambridge: The MIT Press, 2003,
+xxiii+479 pp; hardbound, ISBN
+0-262-06232-1, $40.00, £26.95
+Language in Mind: Advances in the Study
+of Language and Thought
+Dedre Gentner and Susan Goldin-Meadow
+(editors)
+(Northwestern University and University of
+Chicago)
+Cambridge, MA: The MIT Press, ix+528 pp;
+hardbound, ISBN 0-262-07243-2, $85.00;
+paperbound, ISBN 0-262-77163-3, $35.00
+Mighty Fine Words and Smashing
+Expressions: Making Sense of
+Transatlantic English
+Orin Hargraves
+Oxford University Press, 2003, xiii+305 pp;
+hardbound, ISBN 0-19-515704-4, $27.50
+†Learning to Classify Text Using Support
+Vector Machines: Methods, Theory and
+Algorithms
+Thorsten Joachims
+(Cornell University)
+Dordrecht: Kluwer Academic Publishers,
+2002, xvii+205 pp; hardbound, ISBN
+0-7923-7679-X, $110.00, C– 121.00, £77.00
+†The Lexical Basis of Sentence Processing:
+Formal, Computational, and Experimental
+Issues
+Paola Merlo and Suzanne Stevenson
+(editors)
+(University of Geneva and University of
+Toronto)
+Amsterdam: John Benjamins Publishing
+Company (Natural language processing
+series, edited by Ruslan Mitkov, volume 4),
+2002, viii+362 pp; hardbound, ISBN
+90-272-4987-3 and 1-58811-156-3, $100.00,
+C– 110.00
+†Anaphora Resolution
+Ruslan Mitkov
+(University of Wolverhampton)
+London: Longman (Pearson Education),
+2002, xiii+220 pp; hardbound, ISBN
+0-582-32505-6, £49.99
+†The Oxford Handbook of Computational
+Linguistics
+Ruslan Mitkov (editor)
+(University of Wolverhampton)
+Oxford University Press, 2003, xx+784 pp;
+hardbound, ISBN 0-19-823882-7, £76.00,
+$150.00
+513
+Publications Received
+Cognition in a Digital World
+Herre van Oostendorp (editor)
+(Utrecht University)
+Mahwah, NJ: Lawrence Erlbaum Associates,
+2003, xv+298 pp; hardbound, ISBN
+0-8058-3506-7, $69.95; paperbound, ISBN
+0-8058-3507-5, $32.50
+Multimedia and Virtual Reality: Designing
+Multisensory User Interfaces
+Alistair Sutcliffe
+(University of Manchester Institute of
+Science and Technology)
+Mahwah, NJ: Lawrence Erlbaum Associates,
+2003, xvi+331 pp; hardbound ISBN
+0-8058-3950-X, $55.00 ($27.50 prepaid)

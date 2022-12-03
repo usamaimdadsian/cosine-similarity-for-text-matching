@@ -1,0 +1,696 @@
+A Dynamic Logic Formalisation
+of the Dialogue Gameboard
+Raquel Fernandez
+Department of Computer Science
+King's College London
+raquel@dcs.kcl.ac.uk
+Abstract
+This paper explores the possibility of
+using the paradigm of Dynamic Logic
+(DL) to formalise information states and
+update processes on information states.
+In particular, we present a formalisa-
+tion of the dialogue gameboard intro-
+duced by Jonathan Ginzburg. From a
+more general point of view, we show
+that DL is particularly well suited to de-
+velop rigorous formal foundations for an
+approach to dialogue dynamics based on
+information state updates.
+1 Introduction
+A particular development that has received much
+attention in recent work on dialogue modelling is
+the use of information states to characterise the
+state of each dialogue participant's information as
+the conversation proceeds. The information state
+approach to dialogue, as developed for instance
+in the TRINDI project (e.g. (Bohlin et al., 1999;
+Traum et al., 1999)), assumes that some aspects of
+dialogue management are best captured in terms of
+the relevant information that is available to each
+dialogue participant at each state of the conver-
+sation, along with a full account of the possible
+update mechanisms that change this information.
+Unlike classical Artificial Intelligence approaches
+built on the basis of axiomatic theories of rational
+agency, 1 information state accounts tend to avoid
+1 See e.g. (Cohen and Levesque, 1990: Grosz and Sidner,
+1990: Sadek, 1991).
+the use of logical frameworks and concentrate on
+dialogue-specific notions such as common ground,
+discourse obligations and questions under discus-
+sion.
+In this paper we explore the possibility of us-
+ing a modal logic paradigm, namely Dynamic
+Logic (Hardl et al., 2000), originally conceived
+as a formal system to reason about computer pro-
+grams, to formalise information states and up-
+date processes on information states. In partic-
+ular, we present a dynamic logic formalisation
+of Ginzburg's dialogue gameboard (DGB) as in-
+troduced in (Ginzburg, 1996; Ginzburg, ms) and
+(Larsson, 2002). From a more general point of
+view, we show that Dynamic Logic is particularly
+well suited to develop rigorous formal foundations
+for an approach to dialogue dynamics based on in-
+formation state updates.
+1.1 Overview
+The structure of the paper is as follows: First,
+we introduce the basic notions of First-Order Dy-
+namic Logic, describing its syntax and semantics.
+After briefly characterising the structure of the di-
+alogue gameboard in Section 3, our formalisation
+is presented in Section 4. We define the formal
+language and its semantic interpretation, and dis-
+cuss how the different components of the dialogue
+gameboard have been modelled. In Section 5, we
+show how the rules of conversational interaction
+can be expressed within the formalism and explain
+some examples in detail. Finally, in Section 6, we
+present our conclusions and indicate some direc-
+tions for future research.
+17
+sRx: =ts' iff
+sR,os' iff
+sR,u 8' iff
+iff
+sRcp?s'	 iff
+s(3c vs (t))s'
+as" such that sR s" and s"Ros'
+sR„s' or sRos'
+there are finitely many states Si, S2
+	  
+sr, such that
+siR,s2, s2R,93,
+	  ,,,,, iRasn, and s = Si and s' = sn
+= s' and M =,
+M 3 o if A = ,o[v] s , for atomic formulae cp
+MT T is always true
+MI I is never true
+M =, (t1 = t2) iff
+if
+vs
+ (ti) equals vs (t2), for terms t1 and t2
+M	 A
+.A4	 s
+ (A i
+ A A2) iff M	 A1 and M =, A2
+1=, (Al V A2) if M	 A1 or M =, A2
+M =, (A i
+ —> A2) iff M	 A 1 or M =s A2
+M = s xA if there is an a C D, such that s (x a) s' and M = s, A
+M =, VxA if for all a E D, if s(x a) s' then M 1= s, A
+M	 s <c2t> A if there is an s' C S, such that sRas' and M = 8 , A
+=, [cdA if for all s' e S, if sR,s' then M = 8, A
+Table 1: Definition of truth
+Table 2: Accessibility relations
+2 Dynamic Logic: Basic Notions
+The formalisation we present in this paper is based
+on the first-order version of Dynamic Logic (DL)
+as it is discussed in (Hard et al., 2000) and (Gold-
+blatt, 1992). In short, DL is a multi-modal logic
+with a possible worlds semantics, which distin-
+guishes between expressions of two sorts: formu-
+lae and programs. The language of DL is that of
+first-order logic together with a set of modal op-
+erators: for each program a there are a box [a]
+and a diamond < ce> operator. The set of possi-
+ble worlds (or states) in the model is the set of all
+possible assignments to the variables in the lan-
+guage. Atomic programs change the values as-
+signed to particular variables. They can be com-
+bined to form complex programs by means of a
+repertoire of program constructs, such as sequence
+non-deterministic choice U, iteration * and test
+?.
+Originally, DL was conceived as a formal sys-
+tem to reason about programs, formalising cor-
+rectness specifications and proving rigorously that
+those specifications are met by a particular pro-
+gram. From a more general perspective, however,
+it can be viewed as a formal system to reason about
+transformations on states. In this sense, it is par-
+ticularly well suited to provide a fine characteri-
+sation of the dynamic processes that take place in
+dialogue as updates on the information states of
+the dialogue participants.
+In the remainder of this section, we formally in-
+troduce the syntax and the semantics of DL.
+2.1 Syntax
+The language of first-order DL is built upon First-
+Order Logic. It is generated by some first-order
+vocabulary E made up of a set of predicate sym-
+bols, a set of function symbols, a set of constants
+and a set of variables. In addition to the proposi-
+tional connectives and the universal and existential
+quantifier symbols, the language also includes two
+modal operators 11 and <>, a set H of programs
+a and the program constructs ;, U, * and ?.
+Formulae and Programs. Atomic formulae
+are atomic, first-order formulae of the vocabulary
+E, including T and I. The set (I) of well-formed
+18
+"=	 al; a2
+2.2 Semantics
+al U a2 G *
+sRX.push(x)s i iff s (X v,(x) • vs (x))s'
+sRx.pop s'	 iff s(x tail (I) s (x))s'
+0`?
+formulae A is then defined as follows:
+A ::=	 —'24_ A1 A A2 Al V A2	 —> A2
+VxAl]xA [a] A 1<a>A
+In the basic version of DL, atomic programs 7
+are simple assignments (x := t), where x is an
+individual variable and t is a first-order term. The
+set LI of programs a is defined as follows:
+as variables ranging over finite strings of elements
+in the domain. To manipulate these stack vari-
+ables, two additional atomic programs x.pop and
+x.push(x) are included. Here x is some stack
+variable (i.e. a string of elements ) and stands
+for the element to be pushed onto x. The accessi-
+bility relations for these two new atomic programs
+are shown in Table 3, where, for a string a and an
+element a, tail(a • a) = a.
+As usual in modal logic, the language is in-
+terpreted in a possible-worlds based semantical
+structure. A model is a structure
+M = {A, S, R,V}
+where
+• A = {D, I} is a first-order structure;
+• S is a non-empty set of states;
+• R is a function assigning to each program a
+II a binary relation R, C S x S;
+• V is a function V : S SA assigning to
+each s e S an A-valuation vs : Var D, i.e. a
+mapping from the set of variables to elements in
+the domain.
+For s, s' E S, we will write s(xla)s' to mean
+that vs , (x) = a and vs , (y) = v s (y) whenever
+y x.
+Now we are ready to define the truth-relation
+.A4 A of a formula A at state s in model M.
+As usual in first-order logic, we write A 1= yo[v]
+to mean that r is true in A under valuation v. For
+conciseness, we will omit the part dealing with the
+semantics of first-order terms. The formal defini-
+tion of truth in a model is shown in Table 1.
+From the relations R„CSxS, we can induc-
+tively define accessibility relations for the com-
+pound programs. Table 2 shows the accessibility
+relations for basic atomic programs and compound
+programs for all states s. S.
+Stack Variables. Interesting variants of DL
+arise from allowing auxiliary data structures such
+as stacks and arrays. Following (Harel et al.,
+2000), we will consider a version of DL in which
+programs can manipulate some variables as last-
+in-first-out stacks. Formally, stacks are modelled
+Table 3: push and pop programs
+3 The Dialogue Gameboard
+Following the pioneering work of philosophers
+like (Lewis, 1979) and (Stalnaker, 1979), the the-
+ory of context developed by Jonathan Ginzburg
+joins a line of research which, instead of focusing
+on the intentional attitudes of the dialogue partic-
+ipants, highlights the public and conventional as-
+pects of communication. Under this perspective,
+a dialogue can be thought of as a conversational
+scoreboard that keeps track of the state of the con-
+versation.
+The dialogue gameboard (DGB), Ginzburg's
+particular version of the conversational score-
+board, plays a central role in his theory of con-
+text. It can be seen as the context relative to which
+conventionalised interaction is assumed to take
+place. The DGB provides a structured characteri-
+sation of the information which the dialogue par-
+ticipants view as common in terms of three main
+components: a set of FACTS, which the dialogue
+participants take as common ground, a partially
+ordered set of questions under discussion QUD,
+and the LATEST-MOVE made in the dialogue. In-
+spired by the notion of dialogue game (e.g. (Ham-
+blin, 1970; Carlson, 1983)), Ginzburg assumes
+that each move made by a dialogue participant de-
+termines a restricted set of options for follow-up
+in the dialogue, constraining what can be said and
+how.
+The framework has been used to provide an ac-
+count of the kind of context that licenses elliptical
+responses in dialogue (Ginzburg, 1999; Fernandez
+19
+and Ginzburg, 2002; Fernandez et al., 2003) and
+has also been the starting point of implemented
+dialogue systems such as GoDiS (Cooper et al.,
+2001) and IBiS (Larsson, 2002).
+4 A DL Formalisation of the DGB
+To model context in dialogue as it is understood
+in Ginzburg's DGB, we will consider a particular
+domain of interpretation which includes entities
+such as agents (the dialogue participants), ques-
+tions, propositions and dialogue moves. 2 For the
+sake of simplicity, in this paper we restrict our-
+selves to four dialogue move types, namely ask,
+assert, clarification request and acknowledge. The
+main strategy to reason about the effects of conver-
+sational interaction on the DGB, will be to repre-
+sent its main components as variables ranging over
+different domains. In what follows, we introduce
+the details of our formalism.
+4.1 Introducing the Formalism
+Let ,C be a first-order DL language with equality
+made up of unary predicate symbols Q,P,G, DP,
+binary predicate symbols infl(uences) and
+ans(wers), a ternary predicate symbol Utt, a
+function symbol whether, constants a, b, ask,
+ass, clr and ack, and an infinite set Var of vari-
+ables x. Var includes a set V1
+ = { LMa , LMb, UTTI
+of special individual variables and a set V2 =
+{FACTS, QUD a , QUDb, PENDING,, PEND ING}
+of stack variables. We also introduce a function
+symbol head to be applied to stack variables.
+The set of variable symbols Var also includes
+symbols i, j which range over the set of dialogue
+participants, symbols q, q" and p, p' ranging over
+questions and propositions respectively, symbols
+T. r' ranging over propositions or questions, sym-
+bols m, m' ranging over moves, and symbols u, u'
+ranging over utterances.
+Language r is interpreted over a first-order
+structure A = {al}. The domain D of
+A is made up of a set of dialogue participants
+DPv = {a'. b'}, a set of questions Qv , a set of
+propositions Pv , a set of dialogue moves M =
+2 Note that both propositions and questions are first-class
+entities in the domain While this is not the standard ap-
+proach, it is familiar from situation theoretic work and makes
+the current formalisation simpler.
+{ask', ass', clrl , acki}, and an element 1
+which is used to interpret the predicate symbol G,
+i.e. we set 1(G) = {1}. A number of relations are
+declared over D: infl is interpreted as a binary re-
+lation on Qv , ans as a binary relation between PD
+and Qv , and Utt as a set of utterances Uttv , that
+will be modelled as triples (i, m, r) of a dialogue
+participant, a dialogue move and either a proposi-
+tion or a question. The function symbol whether
+is interpreted as a function whether such that for
+every proposition p, whether(p) E QT) . Finally,
+head is interpreted as a function that maps every
+string to its first element.
+Recall that stack variables range over strings of
+elements in the domain: Let Q*, P* Utt* denote
+the set of all finite-length strings over Qv , Pv and
+Uttv , respectively. This will be used later on to
+model the stack variables in V2.
+4.2 The DGB Components
+As mention earlier, in DL, transitions between
+states are changes in variable assignment. We
+therefore represent the dynamic aspects of the in-
+formation state as variables ranging over different
+domains. In particular, we use the variable names
+FACTS, QUD and LM to represent the three dif-
+ferent components of the DGB. We also include
+two additional variables UT T and PENDING.  New
+utterances are assigned to UTT and, in case the
+addressee cannot ground their content, they are
+also assigned to PENDING. This allows to distin-
+guish between two kinds of grounding: content
+grounding (the value of UTT is assigned to LM)
+and proposition grounding or acceptance (a propo-
+sition is incorporated onto FACTS).
+To model content grounding we use a unary
+predicate G and assume that G(x) only holds
+when the addressee of a particular utterance can
+ground its content. That is, according to the for-
+malisation introduced in Section 4.1, G(x) will
+be true in all those states where v (x) = 1. As
+an abbreviation, we will write G when G(x) and
+v (x) = 1, and otherwise.
+One of the assumptions behind the DGB is that
+a realistic characterisation of context must allow
+for asymmetries between the information avail-
+able to the different dialogue participants at a
+given point in a conversation. Thus, although the
+20
+DGB attempts to represent the publicly accessible
+information at each state of the dialogue, it does so
+in terms of the collection of individual information
+states of the participants. In the current formali-
+sation, however, only QUD, LM and PENDING are
+relative to each dialogue participant, while FACTS
+and UTT are unique. This is an obvious choice
+for the case of UTT, which is just used to hold
+new contributions publicly uttered by any dialogue
+participant. In the case of FACTS, however, this
+is a simplification motivated by the fact that the
+current formalisation only attempts to model sim-
+plified situations where FACTS is assumed to be
+empty at the initial state, and only propositions
+that have been commonly agreed on can be inte-
+grated into it. Thus, there is no room for disagree-
+ments in this respect, and the set of FACTS is al-
+ways the same for the two dialogue participants.
+We model QUD and PENDING as stacks, in
+a way that is very much inspired by Qui) 's ac-
+tual implementation in the GoDiS dialogue system
+(Cooper et al. 2001). Although we think of FACTS
+as a set, 3 for technical reasons that will become
+clear below, we also model FACTS as a stack. On
+the other hand, UT T and LM range over utterances,
+i.e. triples (i, m, r), where i is interpreted as the
+speaker of U, 171 is the dialogue move performed
+by u and r represents its content. Formally:
+	V(FACTS)
+	
+P *
+	v(QUD a )
+	
+Q*
+	 ( b )
+	
+Q*
+	v(PENDINGa )
+	
+utt*
+	v(PENDINGb)
+	
+utt*
+	 (LMa )
+	
+uttp
+	v(I,Mb)
+	
+uttp
+	v(LITT)
+	
+uttp
+The reason why FACTS is modelled as a stack
+variable is that we want to be able to check
+whether a particular element (i.e. some proposi-
+tion) is in FACTS, and we want to be able to
+express this in the object language. Modelling
+FACTS as a variable ranging over strings of propo-
+sitions allows us to use the pop program to check
+whether a particular element x belongs to FACTS
+or not: if x is in FACTS and we pop the stack re-
+peatedly, x will show up at some point as the head
+3 Arguably, there are reasons to postulate some kind of or-
+der within the set of facts. See (Ginzburg, 1997) for an ac-
+count of the restrictions on which contextually presupposed
+facts can serve as antecedents for some anaphoric elements.
+of the stack. Thus, we will use the notation x e
+FACTS as an abbreviation for < FACT S.pop * >
+head(FACTS) = x.
+5 Constraining the Model
+Our main aim in this section is to show that the
+formalism outlined previously can be used to ex-
+press the rules underlying cooperative conversa-
+tional interaction in terms of update operations on
+the DGB. The current formalisation attempts to
+model three different scenarios: asking and re-
+sponding to a question, integrating a proposition
+into the commonly agreed facts, and asking for
+clarification when the content of an utterance has
+not been grounded.
+In (Fernandez, 2003) these scenarios were mod-
+elled in the form of complex DL programs corre-
+sponding to conventional protocols. From an ab-
+stract point of view, protocols can be thought of as
+a way to characterise the range of possible follow-
+ups in cooperative dialogue or, alternatively, as a
+representation of the obligations the dialogue par-
+ticipants are socially committed to (see (Traum
+and Allen, 1994; Kreutel and Matheson, 1999)).
+In the present paper, however, we opt for a differ-
+ent strategy: our aim here is to describe the appro-
+priateness conditions for each particular scenario
+by means of a set of axioms, that is, a set of for-
+mulas we postulate to be valid in the model. The
+aim of these formulas is to restrict the operations
+that can be performed on the DGB components. In
+this sense, they can be seen as constraints charac-
+terising the appropriateness conditions of simple
+programs like UT T := (i, c 1 r , r) (asking a clari-
+fication question) or FACT S.push (x) (integrating
+an item into the common ground).
+In what follows we are going to present a few of
+examples in detail.
+5.1 Asking for Clarification
+Following Ginzburg's account, we assume that
+when a dialogue participant a utters an utterance
+L, LMa is updated with ?I. If the content of LM,
+is a question q, q is pushed onto QUD a . Asserting
+a proposition p raises the question whether p for
+discussion. Thus, if the content of LMa is a propo-
+sition p, whether(p) will be pushed onto QUD a .
+At this stage, if the addressee of u can ground its
+21
+Vu (u = (a, in, r) A (UTT = LM, = A
+((Q(r) A head(QUD a ) = r) V (P(r) A head(QUD a ) = whether(r))) A
+< PEND INGb.push(u) > T A Vx [PEND INGb.push(x)] (x = u))
+Vu (u = (a, m, r) A (head(PENDINGb) = UTT = u)
+Q(q)A <UTT := (b, clr,q) > T) A
+(Vim' q [uT T := (i, m', q)] (i = b) A (ml = clr) A Q (q)))
+Table 4: Asking for Clarification
+Vup (7.1 = (i, ack,r) A (LMa = LMb = u) A
+P(p) A head(QUD G ) = head(QUDb) = whether(p) A p V FACTS —>
+<FACTS.push(p) > T A Vi [FACT S.push(x)] (x = p))
+Vp P(p) A (p C FACTS) A (head(QUD a) = head(QUDb) = whether(p))
+< QUD a .pop; QUDb.pop > T
+Table 5: Accepting a Proposition
+content, she updates her LM and QUD accordingly.
+On the other hand, if the addressee cannot ground
+the content of u, then it will be put aside and a
+clarification question will be posited.
+Table 4 shows the axioms formalising this latter
+possibility. Let us have a closer look at the first
+formula. The antecedent describes an information
+state where an utterance it with content r is the
+value of UTT and Lma , the head of QUD a is ei-
+ther r (in case r is a question) or whether(r) (in
+case r is a proposition), and G does not hold. This
+means that the utterance it has just been posited
+by dialogue participant a and that the addressee
+b has not been able to ground its content. In
+such a situation the information state should be up-
+dated by pushing that utterance it onto PEND INGb.
+This is expressed in the consequent of the implica-
+tion, firstly by a diamond formula which guaran-
+tees that the update operation is actually being per-
+formed, and secondly by a box formula which en-
+sures that no utterance other than it can be pushed
+onto PEND INGb.
+In the second formula, the antecedent describes
+a situation where an utterance it with speaker a is
+the value of both UT T and PEND INGb. That is,
+an utterance that has just been posited by speaker
+a is pending in b's information state. This situa-
+tion triggers a request for clarification that should
+be performed by speaker b. This is expressed in
+the consequent of the formula again by means of a
+diamond and a box formula, which ensure that the
+information state will be updated by assigning to
+UTT an utterance (b, c 1r , q) such that its speaker
+is dialogue participant b, its content is a question
+q, and the dialogue move performed is clr.
+5.2 Proposition Acceptance
+In the current formalisation, all propositions have
+to be acknowledged before being introduced into
+the commonly agreed facts. Only once an asser-
+tion has been acknowledged it is considered to be
+accepted by the two dialogue participants.
+The axioms formalising the integration of a
+proposition into FACTS are shown in Table 5.
+The formulas follow the pattern already described
+in the previous subsection. In this case, the an-
+tecedent of the first formula describes a situation
+where an utterance it performing an ack dialogue
+move is both the value of LMa and Lmb, the head's
+value of QUD, and QUD b is whether(p), where p
+is a proposition, and p is not in FACTS. This is the
+situation that licenses the integration of a proposi-
+tion into the common ground. This is expressed
+by the consequent of the axiom which, again by
+means of a diamond and a box formula, ensures
+that proposition p is pushed onto FACTS.
+Once p belongs to FACTS, whether (p) can be
+downdated from QUD. The second formula for-
+malises precisely this situation.
+22
+V q (Q(q) A (head(QUD a ) = head(QUDb) = q) A H]p (P (p) A (p E FACTS)) A ans(p, q))
+airnr (<UTT := (i, m, r)> T) A
+Vimr QuiT := (i, m, r)] ((m = ass) A PH A ans(r, q) A (r E FACTS)) V
+((m = ask) A Q(r) A infl(r, q))))
+Vpq P(p) A Q(q) A (head(QUD a ) head(Q1JDO = q) A (p C FACTS) A ans(p, q)
+< QuD a .pop; QuDb.pop > T
+Table 6: Addressing a Question
+5.3 Addressing a Question
+Our last example concerns appropriate responses
+to a question under discussion. In cooperative
+dialogue, the optimal follow-ups after a question
+has been asked are either answering that question
+or responding with another question which influ-
+ences the first one. The first formula in Table 6
+formalises this observation.
+The antecedent of the formula describes an in-
+formation state where a question q is the head's
+value of both QUD a and QUD b , and q has not
+yet been answered. The consequent of the for-
+mula expresses what the appropriate responses are
+in this situation. This is achieved by means of
+a diamond formula which guarantees that there
+is a state reachable by assigning some utterance
+(i. m. r) to UTT, and a box formula which ensures
+that the utterance assigned to UTT will only be ei-
+ther an answer to the question under discussion or
+a question which influences it.
+Once a question under discussion has been an-
+swered, it can be popped from QUD. The second
+formula in Table 6 formalises this situation. The
+antecedent of this formula has to be understood
+as describing an information state reached after a
+proposition uttered to answer a question has been
+acknowledged and, according to axioms in Table
+5, introduced into FACTS. Once FACTS contains
+a proposition which is an answer to the question
+currently under discussion, this question can be
+downdated from QUD.
+6 Discussion and Future Work
+In this paper we have explored the possibility
+of using DL to formalise the main aspects of
+Ginzburg's DGB. More specifically, we have put
+forward a model where the components of the
+DGB are represented by variables ranging over
+different domains, while update operations are
+brought about by program executions that involve
+changes in variable assignments.
+The use of DL for linguistic matters is of course
+not new. Several authors have observed strong
+parallels between the execution of computer pro-
+grams and the dynamic view on discourse inter-
+pretation. The idea underlying the dynamic logic
+approach to the semantics of programming lan-
+guages, i.e. that the meaning of a program can
+be captured in terms of a relation between states,
+has indeed been successfully applied in natural
+language semantics, for instance, by Groenendijk
+and Stokhof's Dynamic Predicate Logic (Groe-
+nendijk and Stokhof, 1991). Although the aims
+of DPL, mostly restricted to anaphorical relations
+across sentence boundaries, are rather different
+from ours, its guiding idea (i.e. that the meaning of
+a natural language sentence does not lie in its truth
+conditions, but rather in its potential to change
+context) is in line with the perspective taken in this
+paper. One could view the DGB as a semantics for
+utterances where each utterance is interpreted as a
+pair of states, i.e. as the change it brings about in
+the DGB.
+As mention in the introduction, the current for-
+malisation is intended as a first step towards the
+development of rigorous formal foundations for an
+approach to dialogue dynamics based on informa-
+tion state updates. Although this is still very much
+work in progress, we believe that the formalisation
+presented here shows that DL is an expressive and
+precise tool particularly well suited for this task.
+From a more general point of view, we are
+interested in the interaction patterns that char-
+acterise different types of dialogue. In this re-
+spect, a formalisation along the same lines as the
+23
+one outlined in the present paper has been used
+in (Fernandez, 2003) to characterise the internal
+structure of Inquiry-Oriented Dialogues.
+There are many issues that remain still open,
+perhaps the most straightforward being how to use
+the current formalisation for instance to prove de-
+sirable properties of particular dialogue systems.
+In fact, some resemblances can be found between
+the axioms presented in Section 5 and the up-
+date rules described in (LjunglOf, 2000), where
+the author presents a calculus for reasoning math-
+ematically about the rule-based engines developed
+within the TRINDI project. We expect to show in
+our future research that some version of DL can
+also be successfully used to provide precise speci-
+fications of dialogue systems based on information
+state approaches.
+References
+P. Bohlin, R. Cooper, E. Engdhal, and S. Larssson.
+1999. Information states and dialogue move en-
+gines. In IJCAI-99 Workshop on Knowledge and
+Reasoning in Practical Dialogue Systems.
+L. Carlson. 1983. Dialogue Games. Synthese Lan-
+guage Library. D. Reidel.
+P. Cohen and H. Levesque. 1990. Rational interac-
+tion as the basis for communication. In P. Cohen,
+J. Morgana, and M. Pollack, editors, Intentions in
+Communication. MIT Press.
+R. Cooper, S. Larsson, J. Hieronymus, S. Ericsson,
+E.Engdahl, and P. Ljunglof. 2001. Godis and ques-
+tions under discussion. In The TRINDI Book.
+R. Fernandez and J. Ginzburg. 2002. Non-Sentential
+Utterances: A Corpus Study. Traitement automa-
+tique des languages, 43(2):13-42.
+R. Fernandez, J. Ginzburg, H. Gregory, and S. Lap-
+pin. 2003. SHARDS: Fragment Resolution in Di-
+alogue. In H. Bunt and R. Muskens, editors, Com-
+puting Meaning, volume 3. Kluwer. To appear.
+R. Fernandez. 2003. A Dynamic Logic Formalisation
+of Inquirey-Oriented Dialogues. In Proceedings of
+the 6th CLUK Colloquium, pages 17-24, Edinburgh,
+UK.
+J. Ginzburg. 1996. Interrogatives: Questions, facts,
+and dialogue. In S. Lappin, editor, Handbook of
+Contemporary Semantic Theory. Blackwell, Oxford.
+J. Ginzburg.	 1997. Structural mismatch in dia-
+logue. In Proceedings of MunDial 97. Universitaet
+Muenchen.
+J. Ginzburg. 1999. Ellipsis resolution with syntactic
+presuppositions. In H. Bunt and R. Muskens, edi-
+tors, Computing Meaning: Current Issues in Com-
+putational Semantics. Kluwer.
+J. Ginzburg. ms . A semantics for interaction in di-
+alogue. Forthcoming for CSLI Publications. Draft
+chapters available from: http://www.des.kcl.ac.uld
+staff/ginzburg.
+R. Goldblatt. 1992. Logics of Time and Computation.
+Lecture Notes. CSLI Publications.
+J. Groenendijk and M. Stokhof. 1991. Dynamic pred-
+icate logic. Linguistics and Philosophy, 14(1):39-
+100.
+B. Grosz and C. Sidner. 1990. Plans for discourse.
+In P. Cohen, J. Morgana, and M. Pollack, editors,
+Intentions in Communication. MIT Press.
+C. L. Hamblin. 1970. Fallacies. Methuen, London.
+D. Hard, D. Kozen, and J. Tiuryn. 2000. Dynamic
+Logic. Foundations of Computing Series. The MIT
+Press.
+J. Kreutel and C. Matheson. 1999. Modelling ques-
+tions and assertions in dialogue using obligations.
+In Proceedings of Amstelog 99, the 3rd Workshop
+on the Sematics and Pragmatics of Dialogue, Ams-
+terdam.
+S. Larsson. 2002. Issue based Dialogue Management.
+Ph.D. thesis, Gothenburg University.
+D. Lewis. 1979. Score keeping in a language game.
+Journal of Philosophical Logic, 8:339-359.
+P. Ljungl6f. 2000. Formalizing the dialogue move en-
+gine. In Proceedings of the GOtalog Workshop.
+M. D. Sadek. 1991. Dialogue acts as rational plans. In
+Proceedings of the ESCA/ETR workshop on multi-
+modal dialogue.
+R. Stalnaker. 1979. Assertion. Syntax and Semantics,
+9. Academic Press.
+D. Traum and J. Allen. 1994. Discourse obligations
+in dialogue processing. In Proceedings of the 32nd
+annual meeting of the ACL.
+D. Traum, J. Bos, R. Cooper, S. Larsson, 1. Lewin,
+C. Matheson, and M. Poesio. 1999. A model of
+dialogue moves and information state revision. In
+The TRINDI Book.
+24

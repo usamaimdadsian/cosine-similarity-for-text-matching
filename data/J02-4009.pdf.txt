@@ -1,0 +1,175 @@
+582
+Briefly Noted
+Flexibility Principles in Boolean Seman-
+tics: The Interpretation of Coordination,
+Plurality, and Scope in Natural Language
+Yoad Winter
+(Technion, Israel Institute of Technology)
+Cambridge, MA: The MIT Press (Current
+studies in linguistics, edited by Samuel Jay
+Keyser, volume 37), 2001, xi+297 pp;
+hardbound, ISBN 0-262-23218-9, $45.00
+“Since the early work of Montague, Boolean
+semantics and its subfield of generalized
+quantifier theory have become the model-
+theoretic foundation for the study of mean-
+ing in natural languages. This book uses
+this framework to develop a new semantic
+theory of central linguistic phenomena in-
+volving coordination, plurality, and scope.
+The proposed theory makes use of the stan-
+dard Boolean interpretation of conjunction,
+a choice-function account of indefinites, and
+a novel semantics of plurals that is not
+based on the distributive/collective distinc-
+tion. The key to unifying these mechanisms
+is a version of Montagovian semantics that is
+augmented by flexibility principles: seman-
+tic operations that have no counterpart in
+phonology.
+“This is the first book to cover these ar-
+eas in a way that is both linguistically com-
+prehensive and formally explicit. On one
+hand, it addresses questions of primarily lin-
+guistic concern: the semantic functions of
+words like and and or in different languages,
+the interpretation of indefinites and their
+scope, and the semantic typology of noun
+phrases and predicates. On the other hand,
+it addresses formal questions that are mo-
+tivated by the treatment of these linguis-
+tic problems: the use of Boolean algebras
+in linguistics, the proper formalization of
+choice functions within generalized quanti-
+fier theory, and the extension of this the-
+ory to the domain of plurality. While pri-
+marily intended for readers with a back-
+ground in theoretical linguistics, the book
+will also be of interest to researchers and
+advanced students in logic, computational
+linguistics, philosophy of language, and ar-
+tificial intelligence.”—From the publisher’s an-
+nouncement
+Spatial Language: Cognitive and Com-
+putational Perspectives
+Kenny R. Coventry and Patrick Olivier
+(University of Plymouth and University of
+York)
+Dordrecht: Kluwer Academic Publishers,
+2002, xi+283 pp; hardbound, ISBN
+1-4020-0208-4, $100.00, £69.00, C– 110.00
+“The chapters in the present volume reflect
+a commitment to the development of cogni-
+tively informed computational treatments of
+spatial language and spatial representation.
+Therefore the chapters present computational
+work, empirical work, or a combination of
+both.”—From the publisher’s announcement
+The contents of the volume are as follows:
+“Reasoning about shape using the tangential
+axis transform or the shape’s ‘grain’ ” by
+Geoffrey Edwards
+“A conceptual model for representing
+verbal expressions used in route
+descriptions” by Agne`s Gryl, Bernard
+Moulin, and Driss Kettani
+“Resolving ambiguous descriptions through
+visual information” by Ingo Duwe, Klaus
+Kessler, and Hans Strohner
+“An anthropomorphic agent for the use of
+spatial language” by Tanja Jo¨rding and
+Ipke Wachsmuth
+“Gesture, thought, and spatial language” by
+Karen Emmorey and Shannon Casey
+“Organization of temporal situations” by
+Nancy Franklin and Todd Federico
+“Grounding meaning in visual knowledge.
+A case study: Dimensional adjectives” by
+Anna Goy
+“Understanding how we think about space”
+by Christina Manning, Maria D. Sera, and
+Herbert L. Pick, Jr.
+“The real story of ‘over’?” by Kenny R.
+Coventry and Gayna Mather
+“Generating spatial descriptions from a
+cognitive point of view” by Robert Porzel,
+Martin Jansche, and Ralf Meyer-Klabunde
+“Multiple frames of reference in interpreting
+complex projective terms” by Carola
+Eschenbach, Christopher Habel, and
+Annette Leßmo¨llmann
+“Goal-directed effects on processing a
+spatial environment. Indications from
+583
+Briefly Noted
+memory and language” by Holly A.
+Taylor and Susan J. Naylor
+“Memory for text and memory for space.
+Two concurrent memory systems?” by
+Monika Wagener-Wender
+Corpus Linguistics at Work
+Elena Tognini-Bonelli
+(University of Lecce and the Tuscan Word
+Center)
+Amsterdam: John Benjamins Publishing
+Company (Studies in corpus linguistics,
+edited by Elena Tognini-Bonelli, volume 6),
+2001, xi+223 pp; hardbound, ISBN
+1-58811-061-3 and 90-272-2276-2, $57.00,
+C– 63.00
+“The book offers a combined discussion of
+the main theoretical, methodological and ap-
+plication issues related to corpus work. Thus,
+starting from the definition of what is a cor-
+pus and why reading a corpus calls for a dif-
+ferent methodology from reading a text, the
+underlying assumptions behind corpus work
+are discussed. The two main approaches to
+corpus work are discussed as the ‘corpus-
+based’ and the ‘corpus-driven’ approach and
+the theoretical positions underlying them ex-
+plored in detail. The book adopts and exem-
+plifies the parameters of the corpus-driven
+approach and posits a new unit of linguis-
+tic description defined systematically in the
+light of corpus evidence. The applications
+where the corpus-driven approach is exem-
+plified are language teaching and contrastive
+linguistics. Alternating between practical ex-
+amples and theoretical evaluation, the reader
+is led step-by-step to a detailed understand-
+ing of the issues involved in corpus work
+and, at the same time, tempted to explore
+for himself some of the major applications
+where a corpus-driven methodology can re-
+veal unprecedented insights into linguistic
+patterning.”—From the publisher’s announce-
+ment
+Phrase Structure Composition and Syn-
+tactic Dependencies
+Robert Frank
+(Johns Hopkins University)
+Cambridge, MA: The MIT Press (Current
+studies in linguistics, edited by Samuel Jay
+Keyser, volume 34), 2002, xiv+324 pp;
+hardbound, ISBN 0-232-06229-1, $40.00
+“In Phrase Structure Composition and Syntactic
+Dependencies, Robert Frank explores an ap-
+proach to syntactic theory that weds Tree
+Adjoining Grammar (TAG) formalism with
+the minimalist framework. TAG has been ex-
+tensively studied both for its mathematical
+properties and for its usefulness in computa-
+tional linguistics applications. Frank shows
+that incorporating TAG’s formally restrictive
+operations for structure building consider-
+ably simplifies the model of grammatical
+competence, particularly in the components
+concerned with syntactic movement and lo-
+cality. The empirical advantages of the re-
+sulting model, illustrated with extensive case
+studies of subject-raising constructions and
+wh-questions, point toward a conception of
+grammar that is sharply limited in its com-
+putational power.”—From the publisher’s an-
+nouncement

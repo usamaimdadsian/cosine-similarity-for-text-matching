@@ -1,0 +1,562 @@
+Second 
+Conference  
+on 
+Applied 
+Natural Language 
+Processing 
+Association for 
+Computat ional  Linguistics 
+Proceed ings  of the  Conference 
+9--12 February  1988 
+Aust in -Marr r io t t  at the Capitol 
+Aust in,  Texas, USA 
+Publ ished by the Association for Computat iona l  Linguistics 
+© 1988, Association for Computational Linguistics 
+Order copies of this and other ACL proceedings from: 
+Donald E. Walker (ACL) 
+Bell Communications Research 
+445 South Street M:RE 2A379 
+Morristown, NJ 07960-1961, USA 
+PREFACE 
+This Second Conference on Applied Natural Language Processing focuses on "the application 
+of natural language processing techniques to real world problems" and represents many of the 
+advances that have been made since the Association for Computational Linguistics organized its 
+first such conference four years ago in Santa Monica, California. 
+In addition to presentations of thirty-two papers, a panel discussion on "Natural Language 
+Interfaces: Present and Future," and six tutorials, the conference includes a variety of exhibits 
+and demonstrations. The papers, the introduction to the panel session, and abstracts of the tu- 
+torials are included in this volume. 
+Such a meeting can be a success only through the efforts of a large number of people. We 
+are first indebted to the authors of the 106 papers that were received, representing over a dozen 
+countries. While the vast majority of these papers reported on interesting and important work, 
+fewer than a third of the papers could be included in the program. For having to make the 
+difficult decisions, we are also indebted to the members of the Program Committee: 
+Madeleine Bates 
+Tim Finin 
+Ralph Grishman 
+Carole Hafner 
+George Heidorn 
+Paul Martin 
+Graeme Ritchie 
+Harry Tennant 
+BBN Laboratories 
+Unisys 
+New York University 
+Northeastern University 
+IBM Corporation 
+SRI International 
+University of Edinburgh 
+Texas Instruments 
+In addition, much credit and many thanks go to Martha Palmer (Unisys), who organized the 
+tutorials; to Jonathan Slocum (MCC), who handled local arrangements; o Kent Wittenburg and 
+Rich Cohen (MCC), for co-ordinating the exhibits and demonstrations; to Brenda Nashawaty 
+(Artificial Intelligence Corporation), who handled publicity; to Gary Hendrix (Symantec), for pro- 
+viding the facilities within Q~A for membership and conference registration information; to 
+AT&T Bell Laboratories, for providing secretarial support and for hosting the program commit- 
+tee meeting; to MCC, for sponsoring a reception during the conference; and to Mike Dunkle (Aus- 
+tin Mariott), for many ways of helping to prepare for the meeting. 
+Finally, special thanks go to Norm Sondheimer (General Chair, USC/Information Sciences 
+Institute) and Don Walker (ACL Secretary-Treasurer, Bell Communications Research), for at- 
+tending to an array of issues that arose, many of which most of us never knew existed. 
+Bruce Ballard, A T~T Bell Laborotories 
+Chair, Program Committee 
+. ° .  
+III 
+
+CONFERENCE PROGRAM 
+TUESDAY,  9 FEBRUARY 
+Joe  C. Thompson Conference  Center ,  Un ivers i ty  of  Texas  at  Aust in  
+TUTORIALS  
+8:30-12:30 MORNING SESSIONS 
+Introduction to Natural Language Processing 
+James Allen (University of Rochester) 
+Machine-Readable Dictionaries: A Computational Linguistics Perspective 
+Bran Boguraev (Cambridge University) and Beth Levis (Northwestern University) 
+Spoken Language Systems: Past, Present, and Future 
+Salim Roucos (BBN Laboratories, Inc.) 
+1:30-5:30 AFTERNOON SESSIONS 
+The Technology of Natural Language Interfaces 
+Carole Hafner (Northeastern University) 
+The Role of Logic in Representing Meaning and Knowledge 
+Bob Moore (SRI International) 
+Machine Translation 
+Sergei Nirenburg (Carnegie-Mellon University) 
+RECEPT ION 
+7:00-9:00 Austin Marriott at the Capitol 
+9:00-9:15 
+9:15-9:40 
+9:40--10:05 
+10:05-10:30 
+11:00--11:25 
+11:25--11:50 
+11:50--12:15 
+12:15--2:00 
+WEDNESDAY,  10 FEBRUARY 
+Aust in  Mar r io t t  at  the  Cap i ta l  
+Opening remarks and announcements 
+SESS ION 1: SYSTEMS 
+The Multimedia Articulation of Answers in a Natural Language Database Query System 
+Susan E. Brennan (Stanford University & Hewlett Packard) 
+A News Story Categorization System 
+Philip J. Hayes, Laura E. Knecht and Monica J. Cellio (Carnegie Group) 
+An Architecture for Anaphora Resolution 
+Elaine Rich and Susans LuperFoy (MCC) 
+SESS ION 2: GENERATION 
+The SEMSYN Generation System: Ingredients, Applications, Prospects 
+Dietmar Roesner (Universitaet Stuttgart) 
+Two Simple Prediction Algorithms to Facilitate Text Production 
+Lois Boggess (Mississippi State University) 
+From Water to Wine: Generating Natural Language Text from Today's Applications 
+Programs 
+David D. McDonald (Brattle Research Corporation) and Marie M. Meteer (BBN Laboratories) 
+LUNCHEON 
+Guest Speaker: Grant Dove 
+Chairman and CEO of MCC. Prior to joining MCC in July 1987, Mr. Dove had been with 
+Texas Instruments for 28 years, having served as Executive Vice President since 1982. 
+V 
+2:00-2:25 
+2:25-2:50 
+2:50--3:15 
+3:45-4:10 
+4:10--4:35 
+4:35--5:00 
+5:00--5:25 
+6:30--9:00 
+8:30-8:55 
+8:55-9:20 
+9:20-9:45 
+10:15--10:40 
+10:40--11:05 
+11:05--11:30 
+11:30--11:55 
+SESS ION 3: SYNTAX AND SEMANTICS  
+Improved Portability and Parsing Through Interactive Acquisition of Semantic Information 
+Francols-Michel Lang and Lynettte Hirschman (UNISYS) 
+Handling Scope Ambiguities in English 
+Sven Hurum (University of Alberta) 
+Responding to Semantically Ill-Formed Input 
+Ralph Grishman and Ping Peng (New York University) 
+Evaluation of a Parallel Chart Parser 
+Ralph Grishman and Mahesh Chitrao (New York University) 
+SESS ION 4: MORPHOLOGY AND THE LEX ICON 
+Triphone Analysis: A Combined Method for the Correction of Orthographical nd 
+Typographical Errors 
+Brigette van Berkel (TNO Institute of Applied Computer Science) and 
+Koenraad DeSmedt (University of Nijmegen) 
+Creating and Querying Hierarchical Lexical Data Bases 
+Mary S. Neff, Roy J. Byrd, and Omneya A. Rizk (IBM Watson Research Center) 
+Cn yur cmputr aed thsf 
+Linda G. Means (General Motors) 
+Building a Large Thesaurus for Information Retrieval 
+Edward A. Fox, J. Terry Nutter (Virginia Tech), Thomas Ahlswede, Martha Evens 
+(Illinois Institute of Technology), and Judith Marko~itz (Navistar International) 
+RECEPT ION 
+Microelectronics and Computer Technology Corporation (MCC) 
+THURSDAY,  11 FEBRUARY 
+Aust in  Mar r io t t  at the  Cap i ta l  
+SESS ION 5: SYSTEMS 
+Application-Specific Issues in Natural Language Interface Development for a Diagnostic 
+Expert System 
+Karen L. Ryan, Rebecca Root, and Duane Olawsky (Honeywell) 
+The MUL TIVOC Text-to-Speech System 
+Olivier Emorine and Pierre Martin (Cap Sogeti Innovation) 
+Structure from Anarchy: Meta Level Representation o/Expert System Propositions/or 
+Natural Language Interfaces 
+Galina Datskovsky Moerdler (Columbia University) 
+SESS ION 6: TEXT PROCESSING 
+Integrating Top-Down and Bottom-Up Strategies in a Text Processing System 
+Lisa F. Rau and Paul S. Jacobs (General Electric) 
+A Stochastic Parts Program and Noun Phrase Parser for Unrestricted Text 
+Kenneth W. Church (AT&T Bell Laboratories) 
+A Tool for Investigating the Synonymy Relation in a Sense Disambiguated Thesaurus 
+Martin S. Chodorow, Yael Ravin (IBM Watson Research Center) and Howard E. Sachar 
+(IBM Data Systems Division) 
+Dictionary Text Entries as a Source o/Knowledge for Syntactic and Other Disambiguations 
+Karen Jensen and Jean-Louis Binot (IBM Watson Research Center) 
+vl 
+12:00--1:45 
+1:45--2:10 
+2:10--2:35 
+3:00--5:00 
+5:00--6:00 
+8:30--8:55 
+8:55--9:20 
+9:20--9:45 
+10:15--10:40 
+10:40--11:05 
+11:05--11:30 
+11:30--11:55 
+1:30--1:55 
+1:55--2:20 
+2:20--2:45 
+LUNCHEON 
+Guest Speaker: Donald E. Walker 
+Manager of Artificial Intelligence and Information Science Research at Bell Communications 
+Research, and Secretary-Treasurer of ACL and IJCAII 
+SESS ION 7: MAC\]=\[INE TRANSLAT ION 
+EUROTRA: Practical Experience with a Multilingual Machine Translation System under 
+Development 
+Giovanni B. Varile and Peter Lau (Commission of the European Communities) 
+Valency and MT: Recent Developments in the METAL System 
+Rudi Gebruers (Katholieke Universiteit Leuven) 
+PANEL." Natural Language Interfaces: Present and Future 
+Moderator: Norman Sondheimer (USC/Information Sciences Institute) 
+Panelists: Robert J. Bobrow (BBN Laboratories), Developer of RUS 
+Jerrold Ginsparg (Natural Language Inc.), Developer of DataTalker 
+Larry Harris (Artificial Intelligence Corporation), Developer of Intellect 
+Gary G. Hendrix (Symantec), Developer of QBJA 
+Steve Klein (Singular Solutions Engineering) Co-Developer of Lotus HAL 
+RECEPT ION 
+Austin Marriott at the Capitol 
+FR IDAY;  12 FEBRUARY 
+Aust in  Mar r io t t  at  the  Cap i ta l  
+SESS ION 8: SYSTEMS 
+Automatically Generating Natural Language Reports in an Office Environment 
+Jugal Kalita and Sunil Shende (University of Pennsylvania) 
+Luke: An Experiment in the Early Integration of Natural Language Processing 
+David A. Wroblewski and Elaine A. Rich (MCC) 
+The Experience of Developing a Large-Scale Natural Language Text Processing System: 
+CRITIQUE 
+Stephen D. Richardson and Lisa C. Braden-Harder (IBM Watson Research Center) 
+SESS ION 9: MORPHOLOGY AND THE LEX ICON 
+Computational Techniques for Improved Name Search 
+Beatrice W. Oshika (Sparta), Filip Machi (UC Berkeley), Bruce Evans (TRW), and 
+Janet Tom (Systems Development Corporation) 
+The TICC: Parsing Interesting Text 
+David Allport (University of Sussex) 
+Finding Clauses in Unrestricted Text by Finitary and Stochastic Methods 
+Eva Ejerhed (University of Umea) 
+Morphological Processing in the Nabu System 
+Jonathan Slocum (MCC) 
+SESS ION 10: SYNTAX AND SEMANTICS 
+Localizing Expression of Ambiguity 
+John Bear and Jerry R. Hobbs (SRI International) 
+Combinatorial Disambiguation 
+Paula S. Newman (IBM Los Angeles Scientific Center) 
+Canonical Representation i  NLP System Design: A Critical Evaluation 
+Kent Wittenburg and Jim Barnett (MCC) 
+vii 
+TUTORIAL  ABSTRACTS 
+I n t roduct ion  to  Natura l  Language 
+Process ing  
+James Allen, University of Rochester 
+This tutorial will cover the basic concepts 
+underlying the construction of natural language 
+processing systems. These include basic parsing 
+techniques, semantic interpretation and the 
+representation of sentence meaning, as well as 
+knowledge representation and techniques for 
+understanding natural language in context. In 
+particular, the topics to be addressed in detail 
+will include augmented transition networks 
+(ATNs), augmented context-free grammars, the 
+representation of lexical meaning, especially 
+looking at case-grammar based representations, 
+and the interpretation of pronouns and ellipsis. 
+In addition, there will be an overview of 
+knowledge representation, including semantic 
+networks, frame-based systems, and logic, and 
+the use of general world knowledge in language 
+understanding, including scripts and plans. 
+Given the large range of issues and techniques, 
+an emphasis will be placed on those aspects 
+relevant to existing practical natural language 
+systems, such as interfaces to database systems. 
+The remaining issues will be more quickly sur- 
+veyed to give the attendee an idea of what tech- 
+niques will become important in the next genera- 
+tion of natural language systems. The lecture 
+notes will include an extensive bibliography of 
+work in each area. 
+Mach ine-Readab le  D ic t ionar ies :  
+A Computat iona l  L ingu is t i cs  Perspect ive  
+Branimir  Boguraev, Cambridge University 
+and 
+Beth Levin, Northwestern University 
+The lexical information contained explicitly 
+and implicitly in machine-readable dictionaries 
+(MRDs) can support a wide range of activities in 
+computational linguistics, both of theoretical in- 
+terest and of practical importance. This tutorial 
+falls into two parts. The first part will focus on 
+some characteristics of raw lexical data in elec- 
+tronic sources, which make MRDs particularly 
+relevant o natural language processing applica- 
+tions. The second part will discuss how theoreti- 
+cal linguistic research into the lexicon can 
+enhance the contribution of MRDs to applied 
+computational linguistics. 
+The first half will discuss issues concerning the 
+placement of rich lexical resources on-line; raise 
+questions related to the suitability, and ultimate- 
+ly the utility, of MRDs for automatic natural 
+language processing; outline a methodology 
+aimed at extracting maximally usable subsets of 
+the dictionary with minimal introduction of er- 
+rors; and present ways in which specific use can 
+be made of the lexical data for the construction 
+of practical language processing systems with 
+substantial coverage. 
+The second half of the tutorial will review 
+current theoretical linguistic research on the lexi- 
+con, emphasizing proposals concerning the nature 
+of lexical representation a d lexical organization. 
+This overview will provide the context for an ex- 
+amination of how the results of this research can 
+be brought to bear on the problem of extracting 
+syntactic and semantic information encoded in 
+dictionary entries, but not overtly signaled to the 
+dictionary user. 
+Spoken Language Systems:  
+Past ,  P resent ,  and  Future  
+Salim Roucos, BBN Laboratories, Inc. 
+This tutorial will present he issues in develop- 
+ing spoken language systems for natural speech 
+communication between a person and a machine. 
+In particular, the performance of complex tasks 
+using large vocabularies and unrestricted sen- 
+tence structures will be examined. The first Ad- 
+vanced Research Projects Agency (ARPA) Speech 
+Understanding Research project during the 
+seventies will be reviewed, and then the current 
+state-of-the-art in continuous peech recognition 
+and natural language processing will be 
+described. Finally, the types of spoken language 
+systems' capabilities expected to be developed 
+during the next two to three years will be 
+presented. 
+The technical issues that will be covered in- 
+clude acoustic-phonetic modeling, syntax, seman- 
+tics, plan recognition and discourse, and the is- 
+sues for integrating these knowledge sources for 
+speech understanding. In addition, computation- 
+al requirements for real-time understanding, and 
+performance evaluation methodology will be 
+described. Some of the human factors of speech 
+understanding in the context of performing in- 
+teractive tasks using an integrated interface will 
+also be discussed. 
+vi i i  
+The Techno logy  o f  Natura l  Language 
+In ter faces  
+Carole D. Hafner,  Northeastern University 
+This tutorial will describe the development of 
+natural language processing from a research to- 
+pic into a commercial technology. This will in- 
+clude a description of some key research projects 
+of the 1970's and early 1980's which developed 
+methods for building natural language query in- 
+terfaces, initially restricted to just one database, 
+and later made "transportable" to many different 
+applications. The further development of this 
+technology into commercial software products 
+will be discussed and illustrated by a survey of 
+several current products, including both micro- 
+computer NL systems and those offered on 
+higher-performance machines. The qualities a 
+user should look for in a NL interface will be 
+considered, both in terms of linguistic capabili- 
+ties and general ease of use. Finally, some of the 
+remaining "hard problems" that current technol- 
+ogy has not yet solved in a satisfactory way will 
+be discussed. 
+The  Ro le  o f  Log ic  in Represent ing  
+Mean ing  and  Knowledge 
+Robert  C. Moore, SRI International 
+This tutorial will survey the use of logic to 
+represent the meaning of utterances and the 
+extra-linguistic knowledge needed to produce and 
+interpret utterances in natural-language process- 
+ing systems. Problems to be discussed in mean- 
+ing representation i clude quantification, propo- 
+sitional attitudes, comparatives, mass terms and 
+plurals, tense and aspect, and event sentences 
+and adverbials. Logic-based methods (unifica- 
+tion) for systematic specification of the 
+correspondence b tween syntax and semantics in 
+natural language processing systems will also be 
+touched on. In the discussion of the representa- 
+tion of extra-linguistic knowledge, special atten- 
+tion will be devoted to the role played by 
+knowledge of speakers' and hearers' mental 
+states (particularly their knowledge and beliefs) 
+in the generation and interpretation of utter- 
+ances and logical formalisms for representing and 
+reasoning about knowledge of those states. 
+Machine Translat ion 
+Sergei Nirenburg,  Carnegie Mellon University 
+The central problems faced by a Machine 
+Translation (MT) research project are 1) the 
+design and implementation of automatic natural 
+language analyzers and generators that manipu- 
+late morphological, syntactic, semantic and prag- 
+matic knowledge; and 2) the design, acquisition 
+and maintenance of dictionaries and grammars. 
+Since a short-term goal (or even medium term 
+goal) of building a system that performs fully au- 
+tomated machine translation of unconstrained 
+text is not feasible, an MT project must carefully 
+constrain its objectives. 
+This tutorial will describe the knowledge and 
+processing requirements for an MT system. It 
+will present and analyze the set of design choices 
+for MT projects including distinguishing features 
+such as long-term/short-term, academic/com- 
+mercial, fully/partially automated, direct/ 
+transfer/interlingua, pre-/post-/interactive edit- 
+rag. The knowledge acquisition needs of an MT 
+system, with an emphasis on interactive 
+knowledge acquisition tools that facilitate the 
+task of compiling the various dictionaries for an 
+MT system will be discussed. In addition, expec- 
+tations, possibilities and prospects for immediate 
+application of machine translation technology 
+will be considered. Finally, a brief survey of MT 
+research and development work around the 
+world will be presented. 
+ix 
+TABLE OF  CONTENTS 
+SESS ION 1: SYSTEMS 
+The Multimedia Articulation of Answers in a Natural Language Database Query System 
+Susan E. Brennan .... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  1 
+A News Story Categorization System 
+Phi l ip  J. Hayes, Laura E. Knecht,  and Monica J. Cell io ..... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  9 
+An Architecture for Anaphora Resolution 
+Elaine Rich and Susann LuperFoy .... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  18 
+SESS ION 2: GENERATION 
+The SEMSYN Generation System: Ingredients, Applications, Prospects 
+Dietmar  Roesner .... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  25 
+Two Simple Prediction Algorithms to Facilitate Text Production 
+Lois Boggess .... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  33 
+From Water to Wine: Generating Natural Language Text from Today's Applications Programs 
+David D. McDonald and Marie M. Meteer .... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  41 
+SESS ION 3: SYNTAX A~ND SEMANTICS  
+Improved Portability and Parsing Through Interactive Acquisition of Semantic Information 
+Francois-Michel  Lang and Lynett te  Hirschman ..... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  49 
+Handling Scope Ambiguities in English 
+Sven Hurum ..... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  58 
+Responding to Semantically Ill-Formed Input 
+Ralph Gr i shman and Ping Peng .... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  :. 66 
+Evaluation of a Parallel Chart Parser 
+Ralph Gr l shman and Mahesh Chi t rao .... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  71 
+SESS ION 4:  MORPHOLOGY AND THE LEX ICON 
+Triphone Analysis: A Combined Method for the Correction of Orthographical nd Typographical Error~ 
+Brigette van Berkel and Koenraad DeSmedt  .... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  77 
+Creating and Querying Hierarchical Lezical Data Bases 
+Mary  S. Neff, Roy J. Byrd, and Omneya A. Rizk .... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  84 
+Cn yur cmpntr aed ths? 
+L inda G. Means .... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  93 
+Building a Large Thesaurus for Information Retrieval 
+Edward  A. Fox,  J. Terry  Nutter ,  Thomas Ahlswede, Mar tha  Evens, and Jud i th  Markowitz  ................. 101 
+SESS ION 5: SYSTEMS 
+Application-Specific Issues in Natural Language Interface Development for a Diagnostic Expert System 
+Karen L. Ryan,  Rebecca Root 7 and Duane Olawsky .... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  109 
+The MUL TIVOC Text-to-Speech System 
+Olivier Emor ine and Pierre Mart in  .... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  115 
+Structure from Anarchy: Meta Level Representation of Expert System Propositions for Natural Language 
+Interfaces 
+Gal ina Datskovsky Moerdler ... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  121 
+X 
+SESS ION 6: TEXT PROCESSING 
+Integrating Top-Down and Bottom-Up Strategies in a Text Processing System 
+Lisa F. Rau and Paul  S. Jacobs ........................................................................................................... 129 
+A Stochastic Parts Program and Noun Phrase Parser for Unrestricted Text 
+Kenneth W. Church ...................................... . ................................................................................ 136 
+A Tool for Investigating the Synonymy Relation in a Sense Disambiguated Thesaurus 
+Mart in S. Chodorow, Yael Ravin,  and Howard E. Sachar .................................................................... 144 
+Dictionary Text Entries as a Source of Knowledge for Syntactic and Other Disambiguations 
+Karen Jensen and Jean-Louis Binot ..................................................................................................... 152 
+SESS ION 7: MACHINE TRANSLAT ION 
+EUROTRA: Practical Experience with a Multilingual Machine Translation System under Development 
+Giovanni  B. Varile and Peter Lau ....................................................................................................... 160 
+Valency and MT: Recent Developments in the METAL System 
+Rudi Gebruers ..................................................................................................................................... 188 
+PANEL  STATEMENT 
+Natural Language Interfaces: Present and Future 
+Norman Sondheimer ........................................................................................................................... 176 
+SESS ION 8: SYSTEMS 
+Automatically Generating Natural Language Reports in an O\]~ee Environment 
+Jugal Kal i ta and Sunil Shende ............................................................................................................. 178 
+Luke: An Experiment in the Early Integration of Natural Language Processing 
+David A. Wroblewski and Elaine A. Rich ............................................................................................ 186 
+The Experience of Developing a Large-Scale Natural Language Text Processing System: CRITIQUE 
+Stephen D. Richardson and Lisa C. Braden-Harder .............................................................................. 195 
+SESS ION 9: MORPHOLOGY AND THE LEX ICON 
+Computational Techniques for Improved Name Search 
+Beatrice T. Oshika, Fil ip Machi, Bruce Evans, and Janet Tom ............................................................ 203 
+The TICC: Parsing Interesting Text 
+David Al lport ...................................................................................................................................... 211 
+Finding Clauses in Unrestricted Text by Finitary and Stochastic Methods 
+Eva Ejerhed ........................................................................................................................................ 219 
+Morphological Processing in the Nabu System 
+Jonathan Slocum ................................................................................................................................ 228 
+SESS ION 10: SYNTAX AND SEMANTICS  
+Localizing Expression of Ambiguity 
+John Bear and Jerry R. Hobbs ............................................................................................................ 235 
+Combinatorial Disambiguation 
+Paula  S. Newman ................................................................................................................................ 243 
+Canonical Representation i  NLP System Design: A Critical Evaluation 
+Kent  Wi t tenburg  and J im Barnett  ...................................................................................................... 253 
+xi 
+AUTHOR INDEX 
+Thomas  Ah lswede . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  101 
+Dav id  A l lpor t  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  211
+J im Barnet t  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  253 
+John  Bear  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  235 
+Jean-Lou is  B inot  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  152 
+Lois  Boggess  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  33 
+L i sa  C. Braden-Harder  . . . . . . . . . . . . . . . . . . . . . . . . . . .  195 
+Susan  E.  Brennan . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  1 
+Roy  J. Byrd  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  84 
+Mon ica  J. Cel l io . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  9 
+Mahesh  Ch i t rao  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  71 
+Mar t in  S. Chodorow . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  144 
+Kenneth  W.  Church  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  136 
+Koenraad  DeSmedt  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  77 
+Eva  E je rhed  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  219 
+Ol iv ier  Emor ine  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  115 
+Bruce  Evans  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  203
+Mar tha  Evens  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  101
+Edward  A.  Fox  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  101 
+Rud i  Gebruers  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  168 
+Ra lph  Gr i shman . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  66, 71 
+Ph i l ip  J .  Hayes  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  9 
+Lynet t te  H i rschman . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  49 
+Je r ry  R.  Hobbs  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  235 
+Sven  Hurum . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  58 
+Pau l  S. Jacobs  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  129 
+Karen  Jensen  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  152
+Juga l  Ka l i ta  ....-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  178 
+Laura  E.  Knecht  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  9 
+F ranco is -M iche l  Lang  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  49
+Peter  Lau  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  160 
+Susann LuperFoy  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  18 
+F i l ip  Mach i  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  203 
+Jud i th  Markowi tz  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  101 
+P ie r re  Mar t in  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  115
+Dav id  D. McDona ld  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  41 
+L inda  G. Means  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  93 
+Mar ie  M.  Meteer  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  41 
+Ga l ina  Datskovsky  Moerd le r  . . . . . . . . . . . . . . . . . .  121 
+Mary  S. Neff  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  84 
+Pau la  S. Newman . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  243 
+J .  Ter ry  Nut ter  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  101 
+Duane O lawsky  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  109 
+Beat r i ce  T.  Osh ika  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  203 
+P ing  Peng  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  66 
+L i sa  F.  Rau  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  129 
+Yae l  Rav in  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  144 
+E la ine  A.  R ich  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  18, 186 
+Stephen D. R ichardson  . . . . . . . . . . . . . . . . . . . . . . . . . .  195 
+Omneya A. R izk  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  84 
+D ie tmar  Roesner  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  25 
+Rebecca  Root  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  109
+Karen  L. Ryan  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  109 
+Howard  E.  Sachar  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  144 
+Suni l  Shende  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  178
+Jonathan  S locum . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  228 
+Norman Sondhe imer  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  176 
+Janet  Tom . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  203 
+Br iget te  van  Berke l  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  77 
+G iovann i  B. Var i le  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  160 
+Y i |  

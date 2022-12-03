@@ -1,0 +1,135 @@
+Title Index
+Volume 29
+Articles
+Anaphora and Discourse Structure
+Bonnie Webber,
+Matthew Stone,
+Aravind Joshi,
+and Alistair Knott 29(4):545–588
+Automatic Association of Web Directories
+to Word Senses
+Celina Santamaria,
+Julio Gonzalo,
+and Felisa Verdejo 29(3):485–502
+Dependency Parsing with an Extended
+Finite-State Approach
+Kemal Oflazer 29(4):515–544
+Disambiguating Nouns, Verbs, and
+Adjectives Using Automatically Acquired
+Selectional Preferences
+Diana McCarthy
+and John Carroll 29(4):639–654
+Document Structure
+Richard Power,
+Donia Scott,
+and Nadjet Bouayad-Agha 29(2):211–260
+Embedding Web-Based Statistical
+Translation Models in Cross-Language
+Information Retrieval
+Wessel Kraaij,
+Jian-Yun Nie,
+and Michel Simard 29(3):381–419
+Graph-Based Generation of Referring
+Expressions
+Emiel Krahmer,
+Sebastiaan van Erk,
+and Andre´ Verleg 29(1):53–72
+Head-Driven Statistical Models for
+Natural Language Parsing
+Michael Collins 29(4):589–638
+Implementing the Binding and
+Accommodation Theory for Anaphora
+Resolution and Presupposition Projection
+Johan Bos 29(2):179–210
+Machine Learning Approach to
+Discovering Scope Preferences, A
+Derrick Higgins
+and Jerrold M. Sadock 29(1):73–96
+Model for Matching Semantic Maps
+between Languages (French/English,
+English/French), A
+Sabine Ploux
+and Hyungsuk Ji 29(2):155–178
+Optimization Models of Sound Systems
+Using Genetic Algorithms
+Jinyun Ke,
+Mieko Ogura,
+and William S.-Y. Wang 29(1):1–18
+Probabilistic Account of Logical
+Metonymy, A
+Maria Lapata
+and Alex Lascarides 29(2):261–315
+Systematic Comparison of Various
+Statistical Alignment Models, A
+Franz Josef Och
+and Hermann Ney 29(1):19–51
+Using the Web to Obtain Frequencies for
+Unseen Bigrams
+Frank Keller
+and Mirella Lapata 29(3):459–484
+Web as a Parallel Corpus, The
+Philip Resnik
+and Noah A. Smith 29(3):349–380
+wEBMT: Developing and Validating an
+Example-Based Machine Translation
+System Using the World Wide Web
+Andy Way
+and Nano Gough 29(3):421–457
+Word Reordering and a Dynamic
+Programming Beam Search Algorithm for
+Statistical Machine Translation
+Christoph Tillmann
+and Hermann Ney 29(1):97–133
+Squibs and Discussions
+Weighted Deductive Parsing and Knuth’s
+Algorithm
+Mark-Jan Nederhof 29(1):135–143
+Book Reviews
+Anaphora Resolution
+Ruslan Mitkov 29(4):662–664
+Reviewed by Michael Strube
+Cambridge Grammar of the English
+Language, The
+Rodney Huddleston
+and Geoffrey K. Pullum 29(1):144–147
+Reviewed by Chris Brew
+672
+Computational Linguistics Volume 29, Number 4
+Implementing Typed Feature Structure
+Grammars
+Ann Copestake 29(3):507–509
+Reviewed by Gerald Penn
+Learning to Classify Text Using Support
+Vector Machines: Methods, Theory, and
+Algorithms
+Thorsten Joachims 29(4):655–661
+Reviewed by Roberto Basili
+Lexicography and Natural Language
+Processing: A Festschrift in Honour of
+B. T. S. Atkins
+edited by Marie-He´le`ne Corre´ard
+Reviewed by Woody Haynes 29(2):317–320
+and Martha Evens
+Linguistic Evolution through Language
+Acquisition: Formal and Computational
+Models
+edited by Ted Briscoe 29(3):503–506
+Reviewed by Michael A. Arbib
+Multimodality in Language and Speech
+Systems
+edited by Bjo¨rn Granstro¨m,
+David House,
+and Inger Karlsson 29(2):321–324
+Reviewed by Michael Johnston
+Recent Advances in Computational
+Terminology
+edited by Didier Bourigault,
+Christian Jacquemin,
+and Marie-Claude L’Homme 29(2):328–332
+Reviewed by Robert Gaizauskas
+Semantics of Relationships: An
+Interdisciplinary Perspective, The
+edited by Rebecca Green,
+Carol A. Bean,
+and Sung Hyon Myaeng 29(2):325–327
+Reviewed by Maria Lapata

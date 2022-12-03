@@ -1,0 +1,596 @@
+Efficient Search for Interactive Statistical Machine Translation
+Franz Josef Och l and Richard Zens and Hermann Ney
+Chair of Computer Science VI
+RWTH Aachen - University of Technology
+foch,zens,neyl@cs.rwth -aachen.de
+Abstract
+The goal of interactive machine transla-
+tion is to improve the productivity of hu-
+man translators. An interactive machine
+translation system operates as follows:
+the automatic system proposes a transla-
+tion. Now, the human user has two op-
+tions: to accept the suggestion or to cor-
+rect it. During the post-editing process,
+the human user is assisted by the inter-
+active system in the following way: the
+system suggests an extension of the cur-
+rent translation prefix. Then, the user ei-
+ther accepts this extension (completely
+or partially) or ignores it. The two most
+important factors of such an interactive
+system are the quality of the proposed
+extensions and the response time. Here,
+we will use a fully fledged translation
+system to ensure the quality of the pro-
+posed extensions. To achieve fast re-
+sponse times, we will use word hypothe-
+ses graphs as an efficient search space
+representation. We will show results of
+our approach on the Verbmobil task and
+on the Canadian Hansards task.
+1 Introduction
+Current machine translation technology is not able
+to guarantee high quality translations for large do-
+mains. Hence, in many applications, post-editing
+'The author is now affiliated with the Information Science
+Institute, University of Southern California, och@isi.edu .
+of the machine translation output is necessary. In
+such an environment, the main goal of the ma-
+chine translation system is not to produce transla-
+tions that are understandable for an inexperienced
+recipient but to support a professional human post-
+editor.
+Typically, a better quality of the produced ma-
+chine translation text yields a reduced post-editing
+effort. From an application point of view, many
+additional aspects have to be considered: the
+user interface, the used formats and the addi-
+tional support tools such as lexicons, terminologi-
+cal databases or translation memories.
+The concept of interactive machine translation,
+first suggested by (Foster et al., 1996), finds a very
+natural implementation in the framework of statis-
+tical machine translation. In interactive machine
+translation, the basic idea is to provide an environ-
+ment to a human translator that interactively reacts
+upon the input as the user writes or corrects the
+translation. In such an approach, the system sug-
+gests an extension of a sentence that the human
+user either accepts or ignores. An implementation
+of such a tool was performed in the TransType
+project (Foster et al., 1996; Foster et al., 1997;
+Langlais et al., 2000).
+The user interface of the TransType system
+combines a machine translation system and a text
+editor into a single application. The human trans-
+lator types the translation of a given source text.
+For each prefix of a word, the machine translation
+system computes the most probable extension of
+this word and presents this to the user. The human
+translator either accepts this translation by press-
+387
+ing a certain key or ignores the suggestion and
+continues typing.
+Rather than single-word predictions, as in the
+TransType approach, it is preferable that the sug-
+gested extension consists of multiple words or
+whole phrases. Ideally, the whole sentence should
+be suggested completely and the human translator
+should have the freedom to accept any prefix of
+the suggested translation.
+In the following, we will first describe the prob-
+lem from a statistical point of view. For the re-
+sulting decision rule, we will describe efficient ap-
+proximations based on word hypotheses graphs.
+Afterwards, we will present some results. Finally,
+we will describe the implemented prototype sys-
+tem.
+2 Statistical Machine Translation
+We are given a source language ('French') sen-
+tence = f3 . . . ff, which is to be trans-
+lated into a target language ( 'English') sentence
+ef = e l ... 6, ... el-. Among all possible target
+language sentences, we will choose the sentence
+of unknown length / with the highest probability:
+= argmax {Pr (ei f )} (1)
+argmax {Pr (e)) • Pr(fil lef)} (2)
+The decomposition into two knowledge sources
+in Eq. 2 is the so-called source-channel approach
+to statistical machine translation (Brown et al.,
+1990). It allows an independent modeling of tar-
+get language model Pr (ef ) and translation model
+Pr(filef)- The target language model describes
+the well-formedness of the target language sen-
+tence. The translation model links the source lan-
+guage sentence to the target language sentence.
+The argmax operation denotes the search problem,
+i.e. the generation of the output sentence in the tar-
+get language. Here, we maximize over all possible
+target language sentences.
+3 Interactive Machine Translation
+In a statistical approach, the problem of finding
+an extension ef+1 of a given prefix 61 can be de-
+scribed by constraining the search to those sen-
+tences ef that contain ej as prefix. So, we max-
+imize over all possible extensions
+el +1 = argmax {Pr(el) • Pr(ff}ef )} (3)
+For simplicity, we formulated this equation on the
+level of whole words, but of course, the same
+method can also be applied at the character level.
+In an interactive machine translation environ-
+ment, we have to evaluate this quantity after ev-
+ery key-stroke of the human user and compute the
+corresponding extension. For the practicability of
+this approach, an efficient maximization in Eq. 3
+is very important. For the human user, a response
+time larger than a fraction of a second is not ac-
+ceptable. The search algorithms developed so far
+are not able to achieve this efficiency without an
+unacceptable amount of search errors. The one we
+will use usually takes a few seconds per sentence.
+Hence, we have to perform certain simplifications
+making the search problem feasible.
+Our solution is to precompute a subset of pos-
+sible word sequences. The search in Eq. 3 is
+then constrained to this set of hypotheses. As
+data structure for efficiently representing the set
+of possible word sequences, we use word hypothe-
+ses graphs (Ney and Aubert, 1994; Ueffing et al.,
+2002) .
+4 Alignment Templates
+As specific machine translation method, we use
+the alignment template approach (Och et al.,
+1999). The key elements of this approach are the
+alignment templates, which are pairs of source and
+target language phrases together with an alignment
+between the words within the phrases. The advan-
+tage of the alignment template approach compared
+to single word-based statistical translation models
+is that word context and local changes in word or-
+der are explicitly considered.
+The alignment template model refines the trans-
+lation probability Pr Cf by introducing two
+hidden variables z and a fc for the K alignment
+templates and the alignment of the alignment tem-
+388
+plates:
+Pr(fiilef) = E Pr(afc ef) •
+z 1 a 1
+Pr(Z11 ef) • Pr(filzic, afc, ef)
+Hence, we obtain three different probability
+distributions: Pr (at' f ), P r (zic
+ afc ef) and
+Pr(g ztc, of, ef). Here, we omit a detailed de-
+scription of modeling and training as this is not
+relevant for the subsequent exposition. For further
+details, see (Och et al., 1999).
+5 Word Hypotheses Graphs
+A word hypotheses graph is a directed acyclic
+graph G = (V, E). It is a subset of the search
+graph and is computed as a byproduct of the search
+algorithm. Each node n E V corresponds to a par-
+tial translation hypothesis. Each edge (n, n") c
+E is annotated with both a target language word
+e(n, n') and the associated extension probability
+p(n n') of language and translation model. The
+word hypotheses graph is constructed in such a
+way that the extension probabilities only depend
+on the two adjacent nodes. So, these probabilities
+are independent of the considered path through the
+graph. For simplicity, we assume that there exists
+exactly one goal and one start node. For a more de-
+tailed description of word hypotheses graphs, see
+(Ueffing et al., 2002). An example of a simplified
+word hypotheses graph is shown in Fig. 1 for the
+German source sentence "was hast du gesagt?".
+The English reference translation is "what did you
+say?".
+For each node in the word hypotheses graph, the
+maximum probability path to reach the goal node
+is computed. This probability can be decomposed
+into the so-called forward probability p(n), which
+is the maximum probability to reach the node n
+from the start node and the so-called backward
+probability h(n), which is the maximum proba-
+bility to reach the node n backwards from the goal
+node.
+The backward probability h(n) is an optimal
+heuristic function in the spirit of A* search. Hav-
+ing this information, we can compute efficiently
+for each node n in the graph the best successor
+node S (n):
+S(i) = argmax {p(n) • p(n. n') • h(ni)} (4)
+n':(n,n 1 )EE
+As each node n corresponds to a partial translation
+hypothesis el , the optimal extension of this prefix
+is obtained by:
+= e(n. S (n))	 (5)
+ei+2 = e(S (n) S 2 (n))	 (6)
+ei+k — e (sk-1(n) , sk (n)) (7)
+Hence, the function S provides the optimal word
+sequence in a time complexity linear to the number
+of words in the extension.
+Yet, as the word hypotheses graph contains only
+a subset of the possible word sequences, we might
+face the problem that the prefix path is not part of
+the word hypotheses graph. To avoid this prob-
+lem, we perform a tolerant search in the word hy-
+potheses graph. We select the set of nodes that
+correspond to word sequences with minimum Lev-
+enshtein distance (edit distance) to the given pre-
+fix. This can be computed by a straightforward
+extension of the normal Levenshtein algorithm for
+word hypotheses graphs. From this set of nodes,
+we choose the one with maximum probability and
+compute the extension according to Eq. 4. Be-
+cause of this approximation, the suggested trans-
+lation extension might contain words that are al-
+ready part of the translation prefix.
+6 Evaluation Criterion
+As evaluation criterion, we use the key-stroke ra-
+tio (KSR), which is the ratio of the number of
+key-strokes needed to produce the single reference
+translation using the interactive translation system
+divided by the number of key-strokes needed to
+simply type the reference translation. We make the
+simplifying assumption that the user can accept an
+arbitrary length of the proposed extension using a
+single key-stroke. Hence, a key-stroke ratio of 1
+means that the system was never able to suggest
+a correct extension. A very small key-stroke ratio
+means that the suggested extensions are often cor-
+rect. This value gives an indication about the pos-
+sible effective gain that can be achieved if this in-
+389
+Figure 1: Example of a word hypotheses graph for the German source sentence "was hast du gesagt?"
+(English reference translation: "what did you say?").
+teractive translation system is used in a real trans-
+lation task. On the one hand, the key-stroke ratio is
+very optimistic with respect to the efficiency gain
+of the user. On the other hand, it is a well-defined
+objective criterion that we expect to be well corre-
+lated to a more user-centered evaluation criterion.
+A simplified example is shown in Tab. 1. We
+manually selected paths in the word hypotheses
+graph (Fig. 1) to illustrate the interaction with the
+system. In practice, the system should translate
+this short sentence correctly without any user in-
+teraction. The reference translation is "what did
+you say ?" and the first suggestion of the sys-
+tem is "what do you say ?". So, the user accepts
+the prefix "what d" with one key-stroke (denoted
+with a "#") and then enters the correct character
+"i". The next suggestion of the system is "what
+did you said ?". Now, the user accepts the prefix
+"what did you sa" and then types the character "y".
+Finally, the system suggests the correct translation
+the user simply accepts. Overall, the user needed
+5 key-strokes to produce the reference translation
+with the interactive translation system. Simply
+typing the reference translation would take 19 key-
+strokes (including blanks and a return at the end).
+So, the key-stroke ratio is 5/19 = 26.3%.
+Table 1: Example of the post-editing process.
+step
+no.
+source was hast du gesagt ?
+reference what did you say ?
+1 prefix
+extension
+user
+what do you say ?
+#i
+2 prefix
+extension
+user
+what di
+d you said
+#y
+?
+3 prefix
+extension
+user
+what did you say
+?
+#
+7 Results
+7.1 Verbmobil
+The first task, we present results on, is the VERB-
+MOBIL task (Wahlster, 2000). The domain of this
+corpus is appointment scheduling, travel planning,
+and hotel reservation. It consists of transcriptions
+of spontaneous speech. Table 2 shows the corpus
+statistics of this corpus.
+Table 3 shows the resulting key-stroke ratio and
+the average extension time for various word hy-
+potheses graph densities (i.e. the number of edges
+per source word). The table shows the effect of
+both single-word extensions and whole-sentence
+extensions.
+We see a strong correlation between the word
+hypotheses graph density and the response time.
+390
+Table 2: Statistics of training and test corpus for	 Table 4: Statistics of training and test corpus for
+Verbmobil (PP=perplexity).	 the Canadian Hansards task (PP=perplexity).
+German English
+Train Sentences 58 073
+Words 519 523 549 921
+Vocabulary 7 939 4 672
+Singletons 3 453 1 698
+Test Sentences 251
+Words 2 628 2 871
+Trigram PP - 30.5
+French English
+Train	 Sentences 1.5M
+Words 24M 22M
+Vocabulary 100 269 78 332
+Singletons 40 199 31 319
+Test	 Sentences 200
+Words 2 124 2 246
+Trigram PP - 180.5
+Table 3: Verbmobil: key-stroke ratio (KSR) and
+average extension time for various word hypothe-
+ses graph densities (WGD).
+extension type
+WGD
+single-word full sentence
+time
+[s]
+KSR
+[%]
+time
+[s]
+KSR
+[go]
+5 0.003 54.3 0.003 41.7
+14 0.008 47.6 0.008 32.3
+32 0.014 45.7 0.015 29.6
+77 0.022 44.6 0.025 28.1
+188 0.034 43.8 0.038 27.0
+453 0.050 43.0 0.058 25.7
+1030 0.071 42.3 0.091 25.7
+2107 0.106 42.0 0.143 25.0
+3892 0.161 41.9 0.226 25.1
+6513 0.235 41.7 0.345 24.7
+10064 0.333 41.6 0.505 24.5
+When using a larger word hypotheses graph, a
+considerably larger amount of time is needed to
+search for the optimal extension. On the other
+hand, there is a reduction of the KSR: in the
+case of single-word extensions, the KSR improves
+from 54.3% and 0.003 seconds per extension to
+41.6% and 0.333 seconds per extension. Signif-
+icantly better results are obtained by performing
+whole-sentence extensions. Here, the KSR im-
+proves from 41.7% and 0.003 seconds per exten-
+sion to 24.5% and 0.505 seconds per extension.
+7.2 Canadian Hansards
+Additional experiments were carried out on the
+Canadian Hansards task. This task contains the
+proceedings of the Canadian parliament, which are
+kept by law in both French and English. About
+3 million parallel sentences of this bilingual data
+have been made available by the Linguistic Data
+Consortium (LDC). Here, we use a subset of the
+data containing only sentences with a maximum
+length of 30 words. Table 4 shows the training
+and test corpus statistics.
+Table 5 shows the resulting key-stroke ratio and
+the average extension time for various word hy-
+potheses graph densities. Again, we show the ef-
+fect of both single-word extensions and whole-
+sentence extensions.
+The results are similar to the Verbmobil task: by
+using a larger word hypotheses graph, a consid-
+erably larger amount of time is needed to search
+the word hypotheses graph, but on the other hand
+there is an improvement of the KSR: in the case of
+single-word extensions, the KSR improves from
+62.9% and 0.003 seconds per extension to 50.3%
+and 0.436 seconds per extension. As for the Verb-
+mobil task, significantly better results are obtained
+by performing whole-sentence extensions. Here,
+the KSR improves from 46.3% and 0.002 seconds
+per extension to 33.1% and 0.556 seconds per ex-
+tension.
+Regarding the experiments carried out on both
+tasks, we conclude that the set of possible can-
+didate translations can be indeed represented by
+word hypotheses graphs. In addition, we conclude
+that whole-sentence extensions give significantly
+better results than single-word extensions.
+391
+Table 5: Hansards: key-stroke ratio (KSR) and av-
+erage extension time for various word hypotheses
+graph densities (WGD).
+extension type
+WGD
+single-word full sentence
+time
+1s1
+KSR
+1%1
+time
+1s1
+KSR
+1%1
+11 0.003 62.9 0.002 46.3
+22 0.009 58.0 0.009 40.9
+83 0.028 54.2 0.028 36.6
+363 0.059 52.9 0.061 35.8
+1306 0.104 52.0 0.113 34.9
+3673 0.172 51.3 0.194 34.0
+8592 0.274 50.8 0.329 33.5
+17301 0.436 50.3 0.556 33.1
+8 Prototype System
+In the following, we describe how the presented
+method has been used to build an operational
+prototype for interactive translation. This pro-
+totype has been build as part of the EU project
+TransType 2 (IST-2001-32091). It allows an effec-
+tive interaction between the human translator and
+the machine translation system. The prototype has
+the following key properties:
+• The system uses the alignment template ap-
+proach described in section 4 as translation
+engine.
+• It allows the machine translation output to
+be interactively post-edited. The system sug-
+gests a full-sentence extension of the current
+translation prefix. The user either accepts the
+complete suggestion or a certain prefix.
+• The human translator is able to obtain a list
+of alternative words at a specific position in
+the sentence. This helps the human translator
+to find alternative translations.
+• Since the system is based on the statistical
+approach, it can learn from existing sample
+translations. Therefore, it adapts to very spe-
+cific domains without much human interven-
+tion. Unlike systems based on translation
+memories, the system is able to provide sug-
+gestions also for sentences that have not been
+seen in the bilingual translation examples.
+• The system can also learn interactively from
+those sentences that have been corrected or
+accepted by the user. The user may request
+that a specific set of sentences be added to the
+knowledge base. A major aim of this feature
+is an improved user acceptability as the ma-
+chine translation environment is able to adapt
+rapidly and easily to a new vocabulary.
+The developed system seems to have advan-
+tages over currently used machine translation or
+translation memory environments as it combines
+important concepts from these areas into a sin-
+gle application. The two major advantages are the
+ability to suggest full-sentence extensions and the
+ability to learn interactively from user corrections.
+The system is implemented as a client—server
+application. The server performs the actual trans-
+lations as well as all time-consuming operations
+such as computing the extensions. The client in-
+cludes only the user interface and can therefore
+run on a small computer. Client and server are
+connected via Internet or Intranet.
+There is ongoing research to experimentally
+study the productivity gain of such a system for
+professional human translators.
+9 Related Work
+As already mentioned, previous work towards in-
+teractive machine translation has been carried out
+in the TransType project (Foster et al., 1996; Fos-
+ter et al., 1997; Langlais et al., 2000).
+In (Foster et al., 2002) a so-called "user model"
+has been introduced to maximize the expected
+benefit of the human translator. This user model
+consists of two components. The first component
+models the benefit of a certain extension. The sec-
+ond component models the acceptance probability
+of this extension. The user model is used to de-
+termine the length of the proposed extension mea-
+sured in characters.
+The resulting decision rule is more centered on
+the human user than the one in Eq. 3. It takes into
+account, e.g., the time the user needs to read the
+extension (at least approximatively).
+392
+In principle, the decision rule in Eq. 3 can be
+extended by such a user model. In (Foster et al.,
+2002) the assumption is made that "the user ed-
+its only by erasing wrong character from the end
+of a proposal". The approach in this paper is dif-
+ferent in that the user works from left to right by
+either accepting or correcting the proposed trans-
+lation. Therefore, in our approach, we would have
+to modify the details of the user model.
+An additional difference is the used translation
+engine: in (Foster et al., 2002) a simple translation
+model is chosen for efficiency reasons, namely a
+maximum entropy version of IBM2. Here, we
+use a fully fledged translation model and deal with
+the efficiency problem by using word hypotheses
+graphs.
+10 Conclusions
+We have suggested an interactive machine trans-
+lation environment for computer assisted transla-
+tion. It assists the human user by interactively
+reacting upon his/her input. The system suggests
+full-sentence extensions of the current translation
+prefix. The human user can accept any prefix of
+this extension.
+We have used a fully fledged translation sys-
+tem, namely the alignment template approach, to
+produce high quality extensions. Word hypotheses
+graphs have been used to allow an efficient search
+for the optimal extension. Using this method, the
+amount of key-strokes needed to produce the ref-
+erence translation reduces significantly.
+Additional optimizations of the word hypothe-
+ses graphs might improve the efficiency of the
+search. E.g., forward-backward pruning (Sixtus
+and Ortmanns, 1999) could be used to reduce the
+word hypotheses graph density. Further improve-
+ments could be achieved by incorporating a more
+user-centered cost function like the user model in
+(Foster et al., 2002). To answer the question of
+how long the extension should be, a good con-
+fidence measure could be useful (Wessel et al.,
+2001).
+11 Acknowledgement
+This work has been partially funded by the EU
+project TransType 2, IST-2001-32091.
+References
+P. F. Brown, J. Cocke, S. A. Della Pietra, V. J. Della
+Pietra, F. Jelinek, J. D. Lafferty, R. L. Mercer,
+and P. S. Roossin. 1990. A statistical approach
+to machine translation. Computational Linguistics,
+16(2):79-85, June.
+G. Foster, P. Isabelle, and P. Plamondon. 1996. Word
+completion: A first step toward target-text mediated
+IMT. In COLING '96: The 16th Int. Conf on Com-
+putational Linguistics, pages 394-399, Copenhagen,
+Denmark, August.
+G. Foster, P. Isabelle, and P. Plamondon. 1997. Target-
+text mediated interactive machine translation. Ma-
+chine Translation, 12(1):175-194.
+G. Foster, P. Langlais, and G. Lapalme. 2002. User-
+friendly text prediction for translators. In Proceed-
+ings of the 2002 Conference on Empirical Methods
+in Natural Language Processing (EMNLP 2002),
+pages 46-51, Philadelphia, July.
+P. Langlais, G. Foster, and G. Lapalme. 2000.
+TransType: a computer-aided translation typing sys-
+tem. In Workshop on Embedded Machine Transla-
+tion Systems, pages 46-51, Seattle, Wash., May.
+H. Ney and X. Aubert. 1994. A word graph algorithm
+for large vocabulary continuous speech recognition.
+In Proc. Int. Conf on Spoken Language Processing,
+pages 1355-1358, Yokohama, Japan, September.
+F. J. Och, C. Tillmann, and H. Ney. 1999. Improved
+alignment models for statistical machine translation.
+In Proc. of the Joint SIGDAT Conf on Empirical
+Methods in Natural Language Processing and Very
+Large Corpora, pages 20-28, University of Mary-
+land, College Park, MD, June.
+A. Sixtus and S. Ortmanns. 1999. High quality word
+graphs using forward-backward pruning. In Proc.
+Int. Conf on Acoustics, Speech, and Signal Process-
+ing, volume 2, pages 593-596, Phoenix, AZ, USA,
+March.
+N. Ueffing, F. J. Och, and H. Ney. 2002. Generation
+of word graphs in statistical machine translation. In
+Proc. Conf on Empirical Methods for Natural Lan-
+guage Processing, pages 156-163, Philadelphia, PA,
+July.
+W. Wahlster, editor. 2000. Verbmobil: Foundations
+of speech-to-speech translations. Springer Verlag,
+Berlin, Germany, July.
+F. Wessel, R. Schltiter, K. Macherey, and H. Ney.
+2001. Confidence measures for large vocabulary
+continuous speech recognition. IEEE Transactions
+on Speech and Audio Processing, 9(3):288-298,
+March.
+393
+394

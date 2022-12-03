@@ -1,0 +1,325 @@
+Third Conference 
+of the 
+European Chapter  
+of the 
+Association for 
+Computat iona l  Linguistics 
+Proceedings of the Conference 
+1-3 Apri l  1987 
+Univers i ty of Copenhagen 
+Copenhagen,  Denmark  
+Published by the A~soclation for Computational Linguistics 
+©1987, Association for Computational Linguistics 
+Order copies of this and other ACL proceedings from: 
+Donald E. Walker. (ACL) 
+Bell Communications Research 
+445 South Street MRE 2A379 
+Morristown, NJ 07960-1961, USA 
+PREFACE 
+We are very pleased that the Third Conference of the European Chapter of the 
+Association of Computational Linguistics took place in Copenhagen. There was a 
+substantial mount of interest in the Conference from a number of different perspectives. 
+First, we received more than 90 abstracts for reviewing, of which unfortunately we 
+could only accept slightly more than 50~. The programme showed a wide variety of 
+nationalities-although of course mostly Europeans, and a wide span of fields of interest. 
+The largest sessions were on parsing, grammar formalism and syntax, and machine 
+translation. Secondly, the conference attracted quite a large number of registrants (about 
+180) who contributed to its success by their active participation. Thirdly, a number of 
+publishers, software houses, and related organisations displayed information at the 
+meeting. 
+It is my impression that the European Chapter of ACL is getting mature. Although 
+the conference attracted contributions from all over the world, there were a very large 
+number of papers by Europeans that reflected research of particularly high quality. This 
+is to me the best proof that the computational linguistics community in Europe in general, 
+and the European Chapter of ACL in particular, is growing in a sound and solid way. 
+So many have contributed to the success of the conference: the primary credit, of 
+course, goes to the speakers. By their papers they established the quality of the 
+conference. Secondly, thanks should go to the referees and to the programme committee 
+members who did a thorough and conscientious job- it  was not easy to select he papers to 
+be presented. Thirdly, the work of the Organizing Committee is much appreciated. Last, 
+but not least, my special thanks to Kirsten Enevold and Dennis Hammeken who handled 
+all the communication with the participants and actually managed the conference 
+operations. 
+Bente Maegaard 
+Programme Committee Chair 
+ACKNOWLED GEMENTS 
+The ACL European Chapter wishes to express its appreciation to the Faculty of 
+Humanities of the University of Copenhagen, the Danish Research Council for the 
+Humanities, Computer Resources International, Borland International for their support 
+and to the following publishers who contributed to the book exhibition: W. H. Freeman 
+and Company, Kluwer Academic Publishers Group, MIT Press, and North Holland 
+Publishing. 
+i/i 
+ACL EUROPEAN CHAPTER OFF IC IALS 
+Chain 
+Secretary: 
+Treasurem 
+Advisory Committee: 
+Nominating Committee: 
+Margaret King, ISSCO 
+Beat Buchmann, Automated Language Processing Systems 
+Michael Rosner, ISSCO 
+Benny Brodda, University of Stockholm 
+Maurice Gross, University of Paris 
+Christian Rohrer, University of Stuttgart 
+Giacomo Ferrari, University of Pisa 
+Gerald Gazdar, University of Sussex 
+Eva Hajicova, Charles University 
+Gerard Kempen, University of Nijmegen 
+CONFERENCE ORGANIZAT ION 
+Chair: Bente Maegaard, University of Copenhagen 
+Programme Committee: Leonard Bolc, Warsaw University 
+Maurice Gross, University of Paris 
+Margaret King, ISSCO 
+Kimmo Koskenniemi, University of Helsinki 
+Winfried Lenders, University of Bonn 
+Bente Maegaard, University of Copenhagen 
+Stephen Pulman, Cambridge University 
+Local Arrangements: RolfH. Christensen 
+BenteMaegaard 
+Peter Molbaek Hansen 
+Ebbe Spang-Hanssen 
+Torben Thrane 
+Giovanni Adorni 
+Branimir Boguraev 
+Edward T. Briscoe 
+Lauri Carlson 
+Aravind K. Joshi 
+Steven Krauwer 
+Leonardo Lesmo 
+Hanne Ruus 
+Petr Sgall 
+G. J. van der Steen 
+Gerd Willee 
+REFEREES 
+Douglas J. Arnold 
+Christian Boitet 
+Benny Brodda 
+Joyce B. Friedman 
+Gerard Kempen 
+Tjoe-Liong Kwee 
+Domenico Parisi 
+Anna Sagvall Hein 
+Bengt Sigurd 
+Walther yon Hahn 
+Istvan S. Batori 
+David S. Bree 
+Harry Bunt 
+Giovanni Guida 
+Ewan Klein 
+Hubert Lehmann 
+Graeme Ritchie 
+Helmut Schnelle 
+Karen Sparck Jones 
+Wolfgang Wahlster 
+iv 
+TABLE OF CONTENTS 
+The Linguistic Basis of Text Generation (Invited Paper) 
+Laurence Danlos ..........................................................................  ................................................ 1 
+Noneoneatenative Finlte-State Morphology (Invited Paper) 
+Martin Kay ............................................................................................................................................ 2 
+Formalisms for Morphographemic Description 
+Alan Black, Graeme Ritchie, Steve Pulman, Graham Russell ................................................................. 11 
+Morphology in the EUROTRA Base Level Concept 
+Peter Lau, Sergei Perschke .................................................................................................................... 19 
+A Morphological Processor for Modern Greek 
+Angels Ralli, Eleni Galiotou ...................................... ............................................................................ 26 
+A Generative Grammar Approach for the Morphologic and Morphosyntaetie Analysis of Italian 
+Marina Russo ........................................................................................................................................ 32 
+How to Detect Grammatical Errors in a Text without Parsing It 
+Eric Steres Atwell ................................................................................................................................ 38 
+Automated Reasoning About Natural Language Correctness 
+Wolfgang Menzel .................................................................................................................................. 46 
+Towards an Integrated Environment for Spanish Document Verification and Composition 
+R. Casajuana, C. Rodriguez, L. Sopena, C. Villar .................................................................................. 52 
+Pattern Recognition Applied to the Acquisition of a Grammatical Classification System from 
+Unrestricted English Text . 
+Eric Staves Atwell, Nicos Frlxou Drakos ............................................................................................... 56 
+A Multi-Purpose Interface to an On-line Dictionary 
+Branimir Boguraev, David Carter, Ted Brlscoe ..................................................................................... 63 
+A Tool for the Automatic Creation, Extension and Updating of Lezieal Knowledge Bases 
+Walter M. P. Daelemans ....................................................................................................................... 70 
+Text Understanding with Multiple Knowledge Sources: An Experiment in Distributed Parsing 
+Cinzia Costantini, Danilo Fum, Giovanni Guida, Angelo Montanari, Carlo Tasso .................................. 75 
+An Automatic Speech Recognition System for the Italian Language 
+Paolo D'Orta, Marco Ferretti, Alessandro Martelli, Stefano Scarei ........................................................ 80 
+Multilevel Semantic Analysis in an Automatic Speech Understanding and Dialog System 
+Ute Ehrllch ........................................................................................................................................... 84 
+Stochastic Modeling of Language Via Sentence Space Partitioning 
+Alex Martelli ........................................................................................................................................ 91 
+Dictionary Organization for Machine Translation: The Experience and Implications of the 
+UMIST Japanese Project 
+Mary McGee Wood, Elaine Pollard, Heather Horsfall, Natsuko Holden, Brian Chandler, 
+Jeremy Carroll ...................................................................................................................................... 94 
+Machine Translation, Linguistics, and Interlingua 
+Petr Sgall, Jarmila Panevova ................................................................................................................ 99 
+Fail-Soft ("Emergency") Measures in a Production- Oriented MT System 
+Eva Hajicova, Zdenek Kirschner .......................................................................................................... 104 
+Reflex- A Context-Based Translation Aid 
+Paul Sores Kjaersgaard ....................................................................................................................... 109 
+Ruslan - An MT System Between Closely Related Languages 
+Jan Haj ie ......................................................... ; . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  113 
+Subgrammars, Rule Classes and Control in the Rosette Translation System 
+Lisette Appelo,  Carol  Fel l inger,  Jan Landsbergen ... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  118 
+A Model for Preference 
+Dominique Pet i tp ierre,  Steven Krauwer,  Louis des Tombe,  Doug Arno ld ,  
+G iovanni  B. Yari\]e ... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  134 
+Parsing into Discourse Object Descriptions 
+Lars Ahrenberg ... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  140 
+Descriptional Anaphora in Discourse Representation Theory 
+Michael  Hess ... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  148 
+A Proposal for Modifications in the Formalism of GPSG 
+James K i lbury  ... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  158 
+String-Tree Correspondence Grammar: A Declarative Grammar Formalism for Defining the 
+Correspondence B tween Strings of Terms and Tree Structures 
+Yusoff Zahar in .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  160 
+Danish Field Grammar in Typed Prolog 
+Henr ik  Rue .... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  167 
+Auxiliaries and Cllties in French UCG Grammar 
+K. Baschung, G. G. Bes, A. Corluy, T. Gui l lot in .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  173 
+Natural and Simulated Pointing 
+Dagmar  Sehmauks ... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  179 
+Planning for Problem Formulation in Advice-Giving Dialogue 
+Pau l  Decitre, Thomas Grossi, Cleo Jul l ien, Jean-Phi l ippe Solvay ... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  186 
+Modeling Extemporaneous Elaboration 
+Marie  A.  Bienkowski  .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  191 
+An Efficient Contezt-Free Parser for Augmented Phrase-Structure Grammars 
+Massimo Merino,  Antonel la  Spiezio, Giacomo Ferrar i ,  I r ina P rodanof  .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  196 
+Discontinuous Constituents in Trees, Rules, and Parsing 
+Harry  Bunt,  Jan Thesingh, Ko van der Sloot .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  203 
+Deterministic Parsing and Unbounded Dependencies 
+Ted Briseoe ... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  211 
+Declarative Model for Dependency Parsing - A View into Blackboard Methodology 
+K. Yalkonen,  H. Jappinen, A. Lehtola,  M. Y l i lammi  ... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  218 
+A Comparison of Rule-Invocation Strategies in Context-Free Chart Parsing 
+Mats  Wiren ... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  226 
+Coping with Dynamic Syntactic Strategies: An Experimental Environment for an Experimental 
+Parser 
+Oliviero Stock ... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  234 
+Acquisition of Conceptual Data Models from Natural Language Descriptions 
+Wi l l iam J. Black ... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  241 
+A Structured Representation of Word-Senses for Semantic Analysis 
+Mar ia  Teresa Pazienza, Paola  Velardi  .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  249 
+Situations and Prepositional Phrases 
+Er ik  Colban, Jens Er ik Fenstad ... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  258 
+vi 
+Temporal Reasoning in Natural Language Understanding: The Temporal Structure of the Narrative 
+Alexander Nakhimovsky ..................................................................................................................... 282 
+Iteration, Habituality and Verb Form Semantics 
+Frank van Eynde ................................................................................................................................ 270 
+Integrating Semantics and Flexible Syntax by Exploiting Isomorphism Between Grammatical and 
+Semantical Relations 
+Morena Danieli, Franeo Ferrara,  Roberto  Gemello, Claudio RuUent .................................................... 278 
+Fraomentatlon and Part of Speech Disambi#uation 
+Jean-Louls Binot ................................................................................................................................. 284 
+Finite State Processing of Tone Systems 
+Dafydd Gibbon ................................................................................................................................... 291 
+Representation fFeature Systems in a Non-Gonnectionist Molecular Machine 
+Laszlo Ka lman .................................................................................................................................... 298 
+Some Remarks on Gase Relations 
+Juergen Kunze .................................................................................................................................... 302 
+Passives 
+Steve Pu lman ...................................................................................................................................... 306 
+Dealing with the Notion "Obligatory" in Syntactic Analysis 
+Dorothee Reimann .............................................................................................................................. 314 
+vii 
+AUTHORINDEX 
+Lars  Ahrenberg  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  140 
+L i se t te  Appe lo  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  118 
+Doug Arno ld  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  134
+Er ic  S teven  Atwe l l  . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  38, 56 
+K. Baschung . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  173
+G. G. Bes  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  173 
+Mar ie  A .  B ienkowsk i  . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  191 
+Jean-Lou is  B inot  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  284 
+A lan  B lack  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  11 
+Wi l l i am J.  B lack  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  241 
+Bran imi r  Boguraev  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  63 
+Ted  Br i scoe  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  63, 211 
+Har ry  Bunt  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  203
+Jeremy Car ro l l  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  94 
+Dav id  Car ter  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  63 
+R .  Casa juana  . . . . . . . . . . . . . . . . . . .  '  . . . . . . . . . . . . . . . . . . . . . .  52 
+Br ian  Chand ler  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  94 
+Er ik  Co lban  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  258
+A.  Cor luy  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  173 
+C inz ia  Costant in i  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  75 
+Wal te r  M. P. Dae lemans  . . . . . . . . . . . . . . . . . . . . . . . . .  70 
+Morena  Dan ie l i  . . . . . . . . . . . . . . .  : . . . . . . . . . . . . . . . . . . . . .  278 
+Laurence  Dan los  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  1 
+Pau l  Dec i t re  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  186
+Nicos  F r ixou  Drakos  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  56
+Ute  Ehr l i ch  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  84 
+Caro l  Fe l l inger  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  118 
+Jens  Er ik  Fenstad  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  258 
+F ranco  Fer rara  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  278 
+G iacomo Fer rar i  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  196 
+Marco  Fer re t t i  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  80 
+Dan i lo  Fum . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  75 
+E len i  Ga l io tou  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  26 
+Rober to  Gemel lo  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  278 
+Dafydd  G ibbon  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  291 
+Thomas  Gross i  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  186 
+G iovann i  Gu ida  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  75 
+T .  Gu i l l o t in  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  173
+Jan  Ha j i c  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  113 
+Eva  Ha j i cova  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  104
+Michae l  Hess  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  148
+Natsuko  Ho lden ,  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  94 
+Heather  Hors fa l l  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  94 
+H.  Japp inen  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  218
+Cleo  Ju l l i en  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  186
+Lasz lo  Ka lman . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  298 
+Mar t in  Kay  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  2 
+James  K i lbury  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  156 
+Zdenek  K i r schner  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  104 
+Pau l  Soren  K jaersgaard  . . . . . . . . . . . . . . . . . . . . . . . . .  109 
+Steven  Krauwer  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  134 
+Juergen  Kunze  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  302 
+Jan  Landsbergen  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  118 
+Peter  Lau  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  19 
+A .  Lehto la  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  218 
+Mass imo Mar ino  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  196 
+A lessandro  Mar te l l i  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  80 
+A lex  Mar te l l i  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  91 
+Wol fgang  Menze l  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  46 
+Ange lo  Montanar i  . . . . . . . . . . . . . . . . . . . . . .   . . . . . . . . . .  75 
+A lexander  Nakh imovsky  . . . . . . . . . . . . . . . . . . . . . . . .  262 
+Pao lo  D 'Or ta  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  80 
+Ja rmi la  Panevova  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  99 
+Mar ia  Teresa  Paz lenza  . . . . . . . . . . . . . . . . . . . . . . . . . .  249 
+Sergei  Perschke  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  19 
+Domin ique  Pet i tp ie r re  . . . . . . . . . . . . . . . . . . . . . . . . . . .  134 
+E la ine  Po l la rd  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  94 
+I r ina  P rodanof  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  196 
+Steve Pu lman . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  11 ,306  
+Ange la  Ra l l i  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  26 
+Dorothee  Re imann . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  314 
+Graeme R i tch ie  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  11 
+C. Rodr iguez  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  52 
+Henr ik  Rue  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  167 
+C laud io  Ru l lent  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  278 
+Graham Russe l l  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  11 
+Mar ina  Russo  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  32 
+Dagmar  Schmauks  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  179 
+Pet r  Sgal l  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  99 
+S te fano  Scarc i  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  80 
+Jean-Ph i l ippe  So lvay  . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  186 
+L. Sopena  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  52 
+Antone l la  Spiezio . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  196 
+O l iv lero  S tock  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  234 
+Car lo  Tasso  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  75 
+Jan  Thes ingh  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  203
+Lou is  des Tombe . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  134 
+K .  Va lkonen  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  218
+Frank  van  Eynde  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  270 
+Ko  van  der  S loot  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  203 
+G iovann i  B. Var i le  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  134 
+Pao la  Ve la rd i  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  249
+C. V i l la r  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  52 
+Mats  Wi ren  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  226 
+Mary  McGee Wood . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  94 
+M.  Y l i l ammi  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  218
+Yusof f  Zahar in  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  160 
+. ° °  
+Y l l l  

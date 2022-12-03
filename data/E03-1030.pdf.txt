@@ -1,0 +1,751 @@
+Semantic construction in Feature-Based TAG
+Claire Gardent
+CNRS, Nancy
+BP 239 - Campus Scientifique
+54506 Vandoeuvre-les-Nancy,France
+gardent@loria.fr
+Laura Kallmeyer
+TALaNa / Lattice, Universite Paris 7
+2 place Jussieu
+75251 Paris Cedex 05, France
+laura.kallmeyer@linguist.jussieu.fr
+Abstract
+We propose a semantic construction me-
+thod for Feature-Based Tree Adjoining
+Grammar which is based on the derived
+tree, compare it with related proposals
+and briefly discuss some implementation
+possibilities.
+1 Introduction
+Semantic construction is the process of construc-
+ting semantic representations for natural language
+expressions. Perhaps the most well-known propo-
+sal for semantic construction is that presented in
+(Montague, 1974) in which grammar rules are ap-
+plied in tandem with semantic rules to construct
+not only a syntactic tree but also a lambda term
+representing the meaning of the described consti-
+tuent.
+Montague's approach gave rise to much further
+work aiming at determining the correct rules and
+representations needed to build a representation of
+natural language meaning. In particular, compu-
+tational grammars were developed which by and
+large took on Montague's proposal, building se-
+mantic representations in tandem with syntactic
+structures. Thus for instance, (Copestake et al., 2001)
+shows how to specify a Head Driven Phrase Struc-
+ture Grammar (HPSG) which supports the parallel
+construction of a phrase structure (or derived) tree
+and of a semantic representation, (Zeevat et al.,
+1987) shows it for Unification Categorial Gram-
+mar (UCG) and (Dalrymple, 1999) for Lexical Func-
+tional grammar (LFG).
+One grammatical framework for which the idea
+of a Montague style approach to semantic construc-
+tion has not been fully explored is Tree Adjoining
+Grammar (TAG, (Joshi and Schabes, 1997)). In
+that framework, the basic units are (elementary)
+trees and two operations are used to combine trees
+into bigger trees, namely, adjunction and substi-
+tution. Because the adjunction rule differs from
+standard phrase structure rules, two structures are
+associated with any given derivation: a derivation
+tree and a derived tree. While the derived tree is
+the standard phrase structure tree, the derivation
+tree records how the elementary trees used to build
+this derived tree are put together using adjunction
+and substitution. Furthermore, because TAG ele-
+mentary trees localise predicate-argument depen-
+dencies, the TAG derivation tree is usually taken to
+provide an appropriate basis for semantic construc-
+tion. And thus, the more traditional, "derived tree"-
+based approach is not usually pursued — An ex-
+ception to this is (Frank and van Genabith, 2001)
+which presents a fairly extensive specification of a
+derived tree based semantic construction for TAG
+and with which we will compare our approach in
+section 5.
+In this paper, we explore the idea of a semantic
+construction method which is based on the TAG
+derived tree and show how a Montague style (uni-
+fication based) approach to semantic construction
+can be applied to Feature-Based Tree Adjoining
+Grammar (FTAG, (Vijay-Shanker and Joshi, 1988)).
+We relate our approach to existing proposals and
+discuss two possibilities for implementation.
+2 Hole semantics
+We start by introducing the semantic representa-
+tion language we use. As mentioned above, Mon-
+tague was using the lambda calculus. In compu-
+tational linguistics, two new trends have emerged
+however on which our proposal is based.
+123
+On the one hand, there is a trend towards emu-
+lating beta reduction using term unification l . Ins-
+tead of applying a function to its argument and re-
+ducing the resulting lambda term using beta reduc-
+tion, functors are represented using terms whose
+arguments are unification variables. The syntax/se-
+mantics interface and the use of unification then
+ensures that these variables get assigned the ap-
+propriate values i.e., the values representing their
+given arguments.
+On the other hand, flat semantics are being in-
+creasingly used to (i) underspecify the scope of
+scope bearing operators and (ii) prevent the com-
+binatorial problems raised during generation and
+machine translation by the recursive structure of
+lambda term and first order formulae (Bos, 1995;
+Copestake et al., 2001).
+Our proposal builds on these two trends. It mi-
+micks beta reduction using unification and uses a
+flat semantics to underspecify scope and facilitate
+processing.
+The language Lu (for "underspecified logic") is
+a unification based reformulation of the PLU logic
+presented in (Bos, 1995). We give here an informal
+presentation of its syntax and semantics and refer
+the reader for more details to (Bos, 1995).
+Lu describes first order logic formulae. Because
+we introduce unification variables to support se-
+mantic construction, we distinguish two types of
+Lu formulae: the unifying formulae, which contain
+unification variables, and the saturated formulae
+which are free of unification variables.
+First we define the set of unifying formulae. Let
+/mar be a set of individual unification variables and
+Icon be a set of individual constants. Let H be a
+set of "hole" constants, Lc07, be a set of "label"
+constants and Lyar be a set of "label" unification
+variables. Let R be a set of n-ary relations over
+Ivar U /con U H. Finally let > be a relation on HU
+Lcom called "has-scope-over". Then the unifying
+formulae (UF) of Lu are defined as follows:
+Given / E Lvar U Leon, h E	 ,jn E
+/var. U _Gm U H and Rn E R. Then:
+1. 1: Rn(ii,... ,i n ) is a UF of Lu
+1. There are well known empirical problems with this ap-
+proach such as an incorrect treatment of certain conjunction
+cases. Nonetheless the order independence supported by uni-
+fication means that in practice, most large coverage grammars
+continue to do unification based semantic construction.
+2. h > 1 is a UF of Lu
+3. q5, 7/) is a UF of Lu if 7,b is a UF of Lu and 0
+is a UF of Lu
+4. Nothing else is a UF of Lu
+That is, unifying formulae of Lu consist of la-
+belled elementary predications, scoping constraints
+and conjunctions. The saturated formulae of Lu
+are unifying formulae which are devoid of unifica-
+tion variables. The models these saturated formu-
+lae describe are first order formulae and are defi-
+ned by the set of possible "pluggings" i.e., injec-
+tions from the holes of a formula to the labels of
+this formula. Given a saturated formula 0 E Lu,
+a plugging P is possible for 0 if 0 is consistent
+with respect to this plugging.
+Let us define in detail what this means. First, we
+introduce the relation >0 on Lo U Ho for a given
+saturated formula 0: for all k, k', k" e L U
+1. k >0 k
+2. k>k' if k>k' isin çb
+3. k	 k" if k >0 k' and k'	 k"
+4. if there is a k : T in cl) with W occurring in T,
+then k	 k' and k'	 k
+5. if k and k' are different arguments of the same
+Rn in 0 (i.e., there is a Rn(...,k,...,k' , ...) in
+0), then k k' and k' k
+6. nothing else is in > 0
+Condition 5. is important to separate for ins-
+tance, between scope and restriction of a quantifier
+as nothing can be part of both at the same time.
+Let P be an injection from Ho to Lo and let 0'
+be the result of replacing in 4 all kEHo with
+P(k). Then P is a possible plugging for 0 if for
+all k, k' E Lo: if k > y k', then either k = k' or
+k.
+Intuitively, the set of possible pluggings for a gi-
+ven Lu formula defines the set of first order logic
+formulae which are described by this formula. The
+following example illustrates this. Suppose the sen-
+tence in (1) is assigned the Lu formula (2).
+(1) Every dog chases a cat
+(2) 10 : V(x, h1, h2), h1 > 11,11	 D(x), h2 >
+12 7 /2 : Ch(x, Y), 13 : ](x, h3, h4), h3 > 14,14:
+C(y), h4 >12
+124
+2 	NP,,
+Mary
+name( m,mary)
+FIG. 2– "John loves Mary"
+John
+name(j john)
+Npi 
+NRI,Xl VP
+V
+loves
+/o:/ove(xi,x2)
+Only two pluggings are possible for this formula
+in (2) namely {hi —> /1, h2
+	 /3, h3	 /4, h4
+12} and {hi —> 11,h2 /2, h3 /4, h4 l()}.
+They yield the following meaning representations
+for (1):
+io:V(x,11 ,13), 1i:D(x),12:Ch(x,y),13:(x,14 ,12), 1 4:C(Y)
+10 :V(x,11 ,12), 11 :D(x),12:Ch(x,Y),13:3(x,14 Jo), 14:C(y)
+In what follows, we use the following notational
+conventions. We write 10,11,... for label unifica-
+tion constants, so, si , ... for label unification va-
+riables, a, b, ... for individual unification constants
+and xo , x l , ... for individual unification variables.
+3 A unification based Syntax-Semantics
+interface for TAG
+An FTAG consists of a set of (auxiliary or ini-
+tial) elementary trees and two tree composition ope-
+rations: substitution and adjunction. Substitution
+is the standard tree operation used in phrase struc-
+ture grammars while adjunction – sketched in Fig. 1
+– is an operation which inserts an auxiliary tree
+into a derived tree. To account for the effect of
+these insertions, two feature structures (called top
+and bottom) are associated with each tree node in
+FTAG. The top feature structure encodes informa-
+tion that needs to be percolated up the tree should
+an adjunction take place. In contrast, the bottom
+feature structure encodes information that remains
+local to the node at which adjunction takes place.
+FIG. 1 — Adjunction in FTAG
+To construct semantic representations on the ba-
+sis of the derived tree, we proceed as follows.
+First we associate each elementary tree with an
+Lu formula representing its meaning. Second we
+decorate some of the tree nodes with unification
+variables and constants occuring in the Lu for-
+mula. The idea behind this is that the association
+between tree nodes and unification variables en-
+codes the syntax/semantics interface – it specifies
+which node in the tree provides the value for which
+variable in the final semantic representation.
+As trees combine during derivation, two things
+happen: (i) variables are unified – both in the tree
+and in the associated semantic representation – and
+(ii) the semantics of the derived tree is constructed
+from the conjunction of the semantics of the com-
+bined trees. A simple example will illustrate this.
+Suppose the elementary trees for "John", "lo-
+ves" and "Mary" are as in Fig. 2 where a downar-
+row () indicates a substitution node and Cx/C x
+abbreviate a node with category C and a top/bottom
+feature structure including the feature-value pair {
+index : x}. On substitution, the root node of the
+tree being substituted in is unified with the node at
+which substitution takes place. Further, when deri-
+vation ends, the top and bottom feature structures
+of each node in the derived tree are unified. Thus
+in this case, x1 is unified with j and x2 with m.
+Hence, the resulting semantics is:
+10 : love(j, m), name( j, john), name(m, mary)
+4 Some further examples
+For lack of space, we cannot here specify the ge-
+neral principles underlying the semantic labelling
+of lexical trees in a unification based TAG gram-
+mar. Instead, we focus on a number of linguistic
+phenomena which are known to be problematic for
+TAG based semantic construction and show how
+they can be dealt with in the proposed framework.
+4.1 Quantification
+In some TAG approaches (Hockey and Mateyak,
+2000; Abeille, 1991; Abeille et al., 2000), and in
+125
+I\4,81
+dog
+: dog(xi)
+N4.' 2 ' 12
+	VP
+V
+barks
+1 2 : bark(x2)
+1?Ix' 82
+Det
+every
+10 V(x, hi, h2),
+h1 > si, h2 > S2
+particular in Abeille's grammar for French, quan-
+tifiers are treated as adjuncts. First, the noun is ad-
+ded to the verb by substitution then, the quanti-
+fying determiner is adjoined to the noun (see Fig.3).
+10 : V(x, hj, h2) hj > 11, h2 > 12 ,ii: dog(x),12 bark(x)
+FIG. 3 — Quantifiers
+Semantically, a quantifying determiner expresses
+a relation between the denotation of some external
+verbal argument (the quantifier scope) and that of
+its nominal argument (the quantifier restriction).
+In the flat semantics we are using, this is captured
+by associating with "every" the formula
+V(x, hi, h2), h1 > si, h2 > s2
+where the two label variables 8 1 , s2 indicate the
+missing arguments. During semantic construction,
+these two variables must be unified with the ap-
+propriate values, namely with the labels of the res-
+triction and of the scope respectively (e.g., in our
+example with the labels / 1 and 12 ). Moreover the
+variable x bound by the quantifier must be unified
+with the variables x i and x2 predicated of by the
+noun and the verb respectively.
+To account for these various bindings, we pro-
+ceed as follows. First, we associate with the rele-
+vant tree nodes not only an index but also a la-
+bel so that Cx , i/Cx , / now abbreviate a node with
+category C and a top/bottom feature structure in-
+cluding the feature-value pair { index : x, label :
+/}. Second, we distribute these variables between
+top and bottom information so as to correctly cap-
+ture the semantic dependencies between determi-
+ner, scope and restriction. More specifically, note
+that the restriction label variable (s i ) is part of the
+bottom feature structure of the foot node. In this
+way, s i remains local to the N* node and unifies
+with the bottom-label of the root node of the tree
+to which the determiner adjoins. By contrast, the
+scopal label variable s 2 (whose value is fixed by
+the verb) is included in the top feature structure of
+the root node of the determiner tree. It thereby can
+be percolated up to the NP argument node of the
+verb and thus unified with the label made available
+at that node i.e.„ with the verb label (l2 ). Since
+the variable x bound by the quantifier is shared by
+both scope and restriction, it is included in both the
+top feature structure of the determiner root node
+and the bottom feature structure of the determiner
+foot node. As a result, x is unified with both xi
+and x2.
+As should be obvious, the approach straightfor-
+wardly extends to scope ambiguities: by a deriva-
+tion process similar to that sketched in Figure 3,
+the semantic representation obtained for a sentence
+with two quantifiers such as (1) above will be (2)
+which, as seen in section 2 above, describes the
+two formulae representing the possible meanings
+of "every dog chases a cat".
+4.2 Intersective Adjectives
+In a Montague style semantics, an intersective
+adjective denotes a function taking two arguments
+(an individual and a property) and returning a pro-
+position. Using a flat semantics, this intuition can
+be captured by having adjectives binding both an
+individual and a label variable. Thus in Fig. 4, the
+adjective "black" is associated with the semantic
+representation s3 : black(x i ) where 8 3 is a la-
+bel variable and x i an individual variable. Since
+the values of these variables are provided by the
+modified noun and since the combination of ad-
+jective and noun is mediated by adjunction, these
+variables label the bottom feature structure of the
+adjective tree foot node. On adjunction, this bot-
+tom feature structure is then unified with that of
+the argument noun (itself labelled with its own in-
+dex and label) so that noun and adjective end up
+with identical index and label. Note that as the ad-
+jective "passes up" index and label information to
+the adjective tree root node, combination with a
+quantifier will further bind the index now shared
+by noun and adjective to the quantifier index.
+Although we cannot present it here for lack of
+space, the approach can also be extended to deal
+with non subsective adjectives and account for cases
+such as "the former king" (and similarly for ad-
+verbs modifying adjectives "the potentially contro-
+126
+- 	 -4
+versial plan") where the individual predicated of
+is actually not a king (or a controversial plan). In
+that case the predicate associated with the adjec-
+tive must label the adjective node thereby provi-
+ding a value for its modifier.
+4.2.1 VP and S modifiers
+Consider the following examples.
+(3) a. Pat allegedly usually drives a Cadillac.
+b. Intentionally, John knocked twice.
+c. John intentionally knocked twice.
+VP/ 3	Np,_
+ADV VP: 3 	VP/4
+allegedly
+	 ADV	 VP:4
+13 : A(h2),
+/7,3 > 8 3
+	 usually
+14 : U(h3 )h3 > 84
+/0 : 3(u, h0, h1), ho
+	 C(x), h1	 1 2: 12 D(P,x):
+13 : A(h2), h2 > 14,14 U(h3), h3 > 1 2
+FIG. 5 — VP opaque modifier
+The sentence in (3a) has three readings depen-
+ding on the respective scope of "allegedly", "usual-
+ly" and "a cadillac". However in all three cases,
+"allegedly" scopes over "usually". Further, there
+are two possible readings for both (3b) and (3c)
+depending on whether "intentionally" scopes over
+"twice" or the converse.
+The first example can be captured as suggested
+in (Kallmeyer and Joshi, 2002) by ruling out mul-
+tiple adjunctions (one VP modifier is adjoined to
+the other rather than both modifiers being applied
+to the verb) and treating "usually" as an "opaque"
+modifier i.e., one that does not pass up the verb
+label (cf. Fig. 5).
+By contrast, "intentionally" (a so-called "sub-
+ject adverb" with the associated scoping proper-
+ties) and "twice" (a postposed VP adverb) are trea-
+ted as non opaque in that they pass up the verb
+(rather than their own) label to the bottom feature
+structure of their root node. Thereby, scope bea-
+ring elements occurring further up in the derived
+tree bind the verb label. E.g., in (3b) and (3c), the
+two adverbs consume and pass on the verb label
+so that the following Lu formula is obtained:
+1 1
+ : 1(14),
+	
+> 1042 : T(h2), h2 > 10,10 K(j)
+4.3 Control verbs
+In a subject control sentence, "controller" (the
+denotation of the subject of the control verb) and
+"controlee" (the denotation of the unexpressed sub-
+ject of the complement) must be identified. This
+is clearest with ditransitive control verbs such as
+"promise". Given the sentence
+(4) John promised Mary to leave
+the meaning representation must make clear that
+the unexpressed subject of "leave" is "John".
+Fig. 6 sketches the elementary trees associated
+in FTAG with a control verb and its complements.
+As the figure shows, it is easy to associate these
+trees with semantic information that yields the de-
+sired dependencies and in particular, the corefe-
+rence between the implicit subject of the sentential
+complement and that of the control verb.
+-	 --
+,I?S22,12
+NP.1,"	 VP	 PRO 	VP
+V	 NP.V3
+Ides to 	 meet
+10 : T(re j , hi), hi	 a	 12 M(x2, 2 3)
+10 : T(X1 ha), h1 > 12,12 M(Xl, X3)
+FIG. 6 — Control verbs
+5 Related work
+We now compare our approach with three re-
+lated proposals: that of basing semantic construc-
+tion on the TAG derivation tree as put forward in
+(Kallmeyer and Joshi, 2002); an extension of this
+proposal presented in (Kallmeyer, 2002b) and the
+N2 ' 82	N2 1 ,8 3
+	1\1;, s ,	 1\1 1,83
+ -	 N22,11
+every
+	
+black
+	
+dog
+	
+h1>81,11.2>82
+	
+83:b1ack(xi)
+	 ii:dos(x2)
+10 : V(re, hi, h2), hj >Ii, h2 > 82,11 : black(x),11 : dog(x)
+FIG. 4 — Intersective adjectives
+VP/2
+11
+drives a c.
+10 : 3(x, h0, h1),
+h0 > /1, /1 C(x):
+>13,13 : D(P: x)
+127
+glue semantic approach proposed in (Frank and
+van Genabith, 2001).
+5.1 Semantic construction and the derivation
+tree
+The LTAG derivation tree records how elemen-
+tary trees are combined during derivation. Hence
+the nodes of this tree stand for elementary trees
+and the arrows either for substitution or for adjunc-
+tion. In what follows an upward pointing arrow in-
+dicates an adjunction, a downward one a substitu-
+tion. As, e.g., (Kallmeyer and Joshi, 2002) shows,
+semantic construction can be based on the deriva-
+tion tree as follows.
+First elementary trees are associated with se-
+mantic representations. The derivation tree is then
+used to determine functor- argument dependencies:
+an (upwards or downwards going) arrow between
+ni and n2 indicates that ni is a semantic functor
+and n2 provides its argument(s).
+Although the approach works well in general, it
+is known that derivation trees do not provide all
+the necessary functor-argument dependencies.
+A first problem case is embodied by quantifiers.
+As we saw in section 4, quantifiers are semantic
+functors taking two arguments namely, a restric-
+tion and a scope. Further it has been argued mainly
+for French but also for English that syntactically
+a quantifier should be adjoined to its complement
+noun. As a result the derivation tree of a quan-
+tified intransitive sentence as in Fig. 3 is as gi-
+ven in Fig. 7. As observed in (Kallmeyer, 2002b),
+this is problematic for semantic construction be-
+cause there is no arrow pointing from the determi-
+ner to its scope hence no base on which to deter-
+mine the scope of the quantifier. This can be sol-
+ved however by using multi-component TAG to re-
+present a quantifier with two trees, one represen-
+ting the relation between determiner and restric-
+tion, the other representing the relation between
+determiner and scope (Kallmeyer and Joshi, 2002).
+A second problem is illustrated by wh-questions.
+In that case, an element (the wh-word) has a dual
+semantic function: on the one hand, it provides a
+verb argument and on the other, it takes scope over
+a (possibly complex) sentence. In Fig. 7, we give
+the derivation tree for the sentence
+(5) Who does Paul think John said Bill liked?
+As can be seen there is no direct link between
+"who" and the verb introducing its scoping sen-
+tence, namely "think". Hence the scoping relation
+between "who" and "does Paul think John said Bill
+likes" cannot be captured.
+A third type of problems occur when several
+trees are adjoined to distinct nodes of the same
+tree. This typically occurs when raising verbs in-
+teract with long distance dependencies e.g.,
+(6) Mary Paul claims John seems to love.
+As the derivation tree in Fig. 7 shows, the mul-
+tiple adjunction of the trees for "claim" and "seems"
+to (respectively the S and the VP node of) "love"
+result in a derivation tree where no link occurs bet-
+ween "claim" and "seem". But obviously this is
+needed as the "seems" sentence provides the pro-
+positional argument expected by "claims".
+None of these cases are problematic for the de-
+rived tree based approach. Quantifiers are treated
+as described in section 4 while examples (5) and
+(6) are treated as sketched in figures 8 and 9.
+S/ 3
+does
+	 12
+NP	 VP
+	 /NP
+	 VP
+Paul	 V	 S:3	 John	 V
+think	 said
+	13:T(p,h3),h3> s3	 12	 ),h2 > 1 2
+10	 ), 110 > 13, 11 . :L(b,x), 12 :S(j,h2 ), h2 > 11, 13 :T(p,h3 ), h3 > 1 2
+FIG. 8 — Wh-questions
+S„
+NP
+	
+Sio -- 7 	NP 	 *VP/822
+NP VP	 VP/1
+V	 S:0	 V	 VP:,	 to love
+claims	 ScOflis	 /2 :Lo(j,rn)
+10:C1(p,h1), hi > 80	 13:5(1,53 ),52 > 8 a
+10:00,,ha 1, hi > 11, 11:5(1 ,52), h2 > 12, 12:1,0(,),m)
+FIG. 9 — Raising verbs
+5.2 Derivation trees with additional links
+(Kallmeyer, 2002b; Kallmeyer, 2002a) shows that
+some of the problems just described can be solved
+once additional links are added to the derivation
+WHx,so
+who
+1 0.W(x,h0),ho > 8 0  
+S 711
+( 	
+Bill liked
+11 /1:L(b,x1)
+128
+barks
+	 liked	
+to love
+who said Bill
+dog
+	 Mary claims seems John
+John think
+every	 Paul does
+	 Paul
+(a)	 (b)
+	 (c)
+FIG. 7 — Derivation trees
+tree. In particular, given three nodes n i , n,2 , n,3 such times extremely) complex lambda terms as lexical
+that n i is above n2 and n3 is above n3 , if n3 is a
+tree adjoined at the root of n2, then an additio-
+nal link can be established between ni and n3.
+In this way, adjoining quantifiers become unpro-
+blematic as an additional link is established bet-
+ween "barks" and "every" thereby supporting the
+semantic relation between the quantifier and its
+scope. (Kallmeyer, 2002a) further shows that the
+approach can deal with questions.
+Nonetheless since additional links only are war-
+ranted when adjunction takes place at a root node,
+the approach does not straightforwardly extend to
+cases such as (6) where none of the two proble-
+matic adjunctions takes place at the root node of
+the "love" tree; or to derivations such as illustra-
+ted in Fig. 6 where "john" is substituted into the
+tree for "try" which itself is adjoined to the tree
+for "meet" ("john" does not adjoin to the root node
+of "try", hence no additional link is warranted bet-
+ween "john" and "meet").
+5.3 Glue semantics
+The present approach is closest to the glue se-
+mantics approach presented in (Frank and van Ge-
+nabith, 2001). As in our proposal, meaning repre-
+sentations are associated with elementary trees, va-
+riables are shared by the nodes of the elementary
+trees and the meaning representations and seman-
+tic construction is based on the derived, rather than
+on the derivation tree.
+There are two main differences though.
+The first resides in the tools used to do semantic
+construction. In a traditional Montague type ap-
+proach to semantic construction, the assumption
+that semantic composition follows surface consti-
+tuent structure results in the stipulation of (some-
+meaning representations. In a medium size gram-
+mar, the complexity induced by this assumption is
+non-trivial and adds to the complexity of the al-
+ready difficult task of grammar writing. In effect,
+unification-based semantic construction and glue
+semantics provide two different ways of addres-
+sing this problem. Glue semantics uses linear lo-
+gic and deduction to combine semantic meanings
+on the basis of a functional structure wheras the
+approach proposed here uses unification to do bra-
+cketting independent semantic construction on the
+basis of constituent structure.
+The second difference lies in the way variables
+are assigned a value. In the (Frank and van Gena-
+bith, 2001)'s approach, the assignment of values
+to variables results from the additional stipulation
+of a series of variable equation principles: one for
+substitution, another for adjunction of a modifier
+auxiliary tree and a third one for the adjunction
+of a predicative auxiliary tree. By contrast, in the
+present approach, this process is mediated by uni-
+fication and follows from the definition of the sub-
+stitution and adjunction operation in FTAG. Since
+these definitions are already needed for morpho-
+syntax, it seems a priori better to use them rather
+than to add additional stipulations for semantics.
+Further, for the range of phenomena discussed in
+(Frank and van Genabith, 2001), such additional
+stipulations do not seem needed within the flat se-
+mantic framework we adopt. Finally, the chosen
+unification based semantic construction method to-
+gether with the choice of a flat semantics means
+that the ideas developped within the wide coverage
+and freely available HPSG grammar ERG can be
+drawn upon when developing a large scale TAG
+with semantic information.
+129
+6 Implementation
+There are at least two obvious ways to imple-
+ment the above proposal. A first possibility is to
+keep elementary trees and associated semantic re-
+presentations separate and to specify a parser which
+combines not just trees but pairs of trees and se-
+mantic representations. The second possibility is
+to integrate the semantic representations into the
+elementary trees under some priviledged feature
+say sem and to take the semantic representation of
+a derived tree to be the unioned values of this sem
+feature 2 .
+We are currently experimenting with the second
+possibility but within a parsing framework which
+uses the "polarities" presented in (Perrier, 2000) to
+drastically reduce the parsing search space. Preli-
+minary results are encouraging as for the small but
+non trivial grammar fragment available, polarities
+can be shown to restrict the output to only exactly
+as many parses as there are possible syntactic and
+semantic representations for the input sentence.
+7 Conclusion
+We have shown how FTAG could be used to
+construct flat semantic representations during de-
+rivations and compared this approach with rela-
+ted proposals. Future work will concentrate on (i)
+implementing and extending the present fragment,
+(ii) integrating the present proposal within a meta-
+grammar for FTAG so as to factorise semantic in-
+formation and automatically produce FTAGs with
+a semantic dimension and (iii) investigating how
+semantic information could be used to prune parse
+forests and improve parsing performance.
+Acknowledgments
+The cooperation between the authors leading to
+this paper was made possible by the INRIA ARC
+GENT (Generation and Inference). We are grate-
+ful to Anette Frank, Josef van Genabith, Aravind
+Joshi, Maribel Romero and three anonymous re-
+viewers for their comments on this paper.
+2. Because we use a flat semantics, the feature structures
+needed to represent a tree meaning need not be recursive and
+given some arbitrary but reasonable bound on the set of la-
+bels, individuals and holes used in a derivation, it might still
+be possible in that case to have an FTAG that has the same
+generative capacity as a TAG.
+References
+A. Abellle, M.H. Candito, and A. Kinyon. 2000. The
+current status of FTAG. In Proceedings of TAG+5,
+pages 11-18, Paris.
+A. Abellle. 1991. Une grammaire lexicalisee d'arbres
+adjoints pour le francais: application a l'analyse
+automatique. Ph.D. thesis, Universite Paris 7.
+J. Bos. 1995. Predicate logic unplugged. In Paul Dek-
+ker and Martin Stokhof, editors, Proceedings of the
+10th Amsterdam Colloquium, pages 133-142.
+A. Copestake, A. Lascarides, and D. Flickinger. 2001.
+An algebra for semantic construction in constraint-
+based grammars. In Proceedings of the 39th Annual
+Meeting of the Association for Computational Lin-
+guistics, Toulouse, France.
+M. Dalrymple. 1999. Semantics and syntax in lexical
+functional grammar. MIT Press.
+A. Frank and J. van Genabith. 2001. GlueTag. Li-
+near Logic based Semantics for LTAG. In M. Butt
+and T. Holloway King, editors, Proceedings of the
+LFG01 Conference, Hong Kong.
+B. A. Hockey and H. Mateyak. 2000. Determining De-
+terminer Sequencing: A Syntactic Analysis for En-
+glish. In Anne Abeille and Owen Rambow, editors,
+Tree Adjoining Grammars: Formalisms, Linguistic
+Analyses and Processing, pages 221-249. CSLI.
+A. K. Joshi and Y. Schabes. 1997. Tree-Adjoning
+Grammars. In G. Rozenberg and A. Salomaa, edi-
+tors, Handbook of Formal Languages, pages 69—
+123. Springer.
+L. Kallmeyer and A. K. Joshi. 2002. Factoring Pre-
+dicate Argument and Scope Semantics: Underspeci-
+fied Semantics with LTAG. Research on Language
+and Computation. To appear.
+L. Kallmeyer. 2002a. Enriching the TAG Derivation
+Tree for Semantics. In Proceedings of KONVENS
+2002, pages 67 — 74, Saarbriicken, October.
+L. Kallmeyer. 2002b. Using an Enriched TAG Deri-
+vation Structure as Basis for Semantics. In Procee-
+dings of TAG+6 Workshop, pages 127— 136, Venice.
+R. Montague. 1974. The Proper Treatment of Quanti-
+fication in Ordinary English. In Richmond H. Tho-
+mason, editor, Formal Philosophy: Selected Papers
+of Richard Montague, pages 247-270. Yale Univer-
+sity Press, New Haven.
+G. Perrier. 2000. Interaction grammars. In Procee-
+dings of 18th International Conference on Compu-
+tational Linguistics (CoLing 2000), Saarbriicken.
+K. Vijay-Shanker and A. K. Joshi. 1988. Feature struc-
+tures based tree adjoining grammar. In Proceedings
+of COLING, pages 714-719, Budapest.
+H. Zeevat, E. Klein, and J. Calder. 1987. An intro-
+duction to unification categorial grammar. In Cate-
+gorial Grammer, Unification grammar and parsing.
+University of Edinburgh.
+130

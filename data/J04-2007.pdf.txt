@@ -1,0 +1,108 @@
+251
+Publications Received
+Books listed below that are marked with a
+† have been selected for review in a future
+issue, and reviewers have been assigned to
+each.
+Authors and publishers who wish their pub-
+lications to be considered for review in Com-
+putational Linguistics should send a copy to
+the book review editor, Graeme Hirst, De-
+partment of Computer Science, University of
+Toronto, Toronto, Canada M5S 3G4. All rel-
+evant books received will be listed, but not
+all can be reviewed. Technical reports (other
+than dissertations) will not be listed or re-
+viewed. Authors should be aware that some
+publishers will not send books for review
+(even when instructed to do so); authors wish-
+ing to enquire as to whether their book has
+been received for review may contact the book
+review editor.
+Readers who wish to be considered as book
+reviewers for the journal should contact the
+book review editor, outlining their qualifica-
+tions, by e-mail at gh@cs.toronto.edu or at the
+address above.
+†Handbook for Language Engineers
+Ali Farghaly (editor)
+(SYSTRAN Software Corporation)
+Stanford, CA: CSLI Publications (CSLI
+lecture notes, number 164) (distributed by
+the University of Chicago Press), 2003,
+xi+442 pp; hardbound, ISBN 1-57586-395-2,
+$62.50; paperbound, ISBN 1-57586-396-0,
+$25.00, £17.50
+Selected Papers on Computer Languages
+Donald E. Knuth
+(Stanford University)
+Stanford, CA: CSLI Publications (distributed
+by the University of Chicago Press), 2003,
+xvi+594 pp; paperbound, ISBN
+1-57586-382-0, $30.00, £21.00
+†The Mathematics of Language
+Marcus Kracht
+(UCLA)
+Berlin: Mouton de Gruyter (Studies in
+generative grammar, volume 63), 2003,
+xvi+589 pp; hardbound, ISBN 3-11-017620-3,
+$118.00, C– 98.00
+Indefinites and the Type of Sets
+Fred Landman
+(Tel Aviv University)
+Malden, MA: Blackwell Publishing
+(Explorations in semantics series, edited by
+Susan Rothstein), 2004, xxvii+269 pp;
+hardbound, ISBN 1-4051-1630-7, $74.95;
+paperbound, ISBN 1-4051-1631-5, $39.95
+†Semantic Relations and the Lexicon:
+Antonymy, Synonymy, and Other
+Paradigms
+M. Lynne Murphy
+(University of Sussex)
+Cambridge, England: Cambridge University
+Press, 2003, ix+292 pp; hardbound, ISBN
+0-521-78067-5, $65.00
+Compositionality in Formal Semantics:
+Selected Papers
+Barbara H. Partee
+(University of Massachusetts, Amherst)
+Malden, MA: Blackwell Publishing
+(Explorations in semantics series, edited by
+Susan Rothstein), 2004, xi+331 pp;
+hardbound, ISBN 1-4051-0934-3, $79.95;
+paperbound, ISBN 1-4051-0935-1, $44.95
+Structuring Events
+Susan Rothstein
+(Bar-Ilan University)
+Malden, MA: Blackwell Publishing
+(Explorations in semantics series, edited by
+Susan Rothstein), 2004, x+206 pp;
+hardbound, ISBN 1-4051-0067-0, $74.95;
+paperbound, ISBN 1-4051-0068-9, $39.95
+†Virtual Humans: A Build-It-Yourself Kit,
+Complete with Software and Step-by-Step
+Instructions
+Peter Plantec
+New York: Amacom (American
+Management Association), 2004,
+xviii+279 pp and CD-ROM; paperbound,
+ISBN 0-8144-7221-4, $34.95
+Holographic Reduced Representation:
+Distributed Representation for Cognitive
+Structures
+Tony A. Plate
+(Black Mesa Capital)
+Stanford, CA: CSLI Publications (distributed
+by the University of Chicago Press), 2003,
+ix+300 pp; paperbound, ISBN 1-57586-430-4,
+$25.00, £17.50
+Relating Events in Narrative, volume 2:
+Typological and Contextual Perspectives
+Sven Stro¨mqvist and Ludo Verhoven
+(editors)
+(Lund University and University of
+Nijmegen)
+Mahwah, NJ: Erlbaum, 2004, viii+610 pp;
+hardbound, ISBN 0-8058-4672-7, $110.00
+($65.00 prepaid)
